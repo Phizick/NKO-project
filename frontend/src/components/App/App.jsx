@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom";
+import { ErrorPage } from "../../pages/ErrorPage/ErrorPage";
 import { MainPage } from "../../pages/MainPage/MainPage";
 import styleApp from "./App.module.css";
 
@@ -10,7 +11,7 @@ export const App = () => {
           <MainPage />
         </Route>
         <Route path="*">
-          <h1>Error Page</h1>
+          <ErrorPage />
         </Route>
       </Switch>
     </div>
