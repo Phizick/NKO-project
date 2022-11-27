@@ -1,0 +1,64 @@
+.partners {
+    margin: 96px 0;
+    background-color: var(--Gradation-200);
+    padding: 40px 104px;
+}
+
+.title {
+    font-family: 'Sreda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;   
+    text-align: center;    
+    color: var(--Gradation-700);
+    margin: 0;
+}
+
+.list {
+    margin: 16px 0 40px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 24px;
+
+}
+
+.item {
+    background-color: var(--Gradation-100);
+    height: 100%;
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+    .partners {
+        padding: 40px 70px;
+    }
+
+    .list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .partners {
+        padding: 40px 16px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+    
+    .list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 20px;
+    }
+}
