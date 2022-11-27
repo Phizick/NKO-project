@@ -1,0 +1,9 @@
+.promo {
+    margin: 40px 104px 96px;
+    background-image: url(../../../images/group.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--Cyan-300);
+    padding: 153px 208px;
+    border-radius: 20px;
+}

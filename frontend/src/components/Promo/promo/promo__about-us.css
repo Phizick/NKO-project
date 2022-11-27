@@ -1,0 +1,15 @@
+.promo__about-us {
+    height: 100%;
+    width: 153px;
+    text-decoration: none;
+    color: var(--Gradation-100);
+    border: 1px solid rgba(242, 242, 243, 0.1);
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 16px 0 0;
+}

@@ -1,0 +1,17 @@
+.promo__image {
+    box-sizing: border-box;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #2C5F72;
+    border-radius: 48px;
+    margin-left: -20px;
+    margin-bottom: -13px;
+}
+
+.promo__image:first-of-type {
+    margin-left: 5px;
+}
+
+.promo__image:last-of-type {
+    margin-right: 5px;
+}
