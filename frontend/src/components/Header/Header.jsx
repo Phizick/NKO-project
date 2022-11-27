@@ -3,7 +3,7 @@ import "../../index.css";
 import BurgerMenu from "./BurgerMenu";
 import "./Header.component.css";
 
-const Header = () => {
+export const Header = () => {
   const history = useHistory();
 
   const handleMenuClick = () => {
