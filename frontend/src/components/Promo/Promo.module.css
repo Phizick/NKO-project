@@ -80,7 +80,7 @@
     width: 153px;
     text-decoration: none;
     color: var(--Gradation-100);
-    border: 1px solid rgba(242, 242, 243, 0.1);
+    border: 1px solid var(--Gradation-100);
     border-radius: 5px;
     font-family: Inter;
     font-size: 14px;
@@ -89,6 +89,11 @@
     letter-spacing: 0em;
     text-align: center;
     margin: 0 16px 0 0;
+}
+
+.aboutUs:hover {
+    background-color:  var(--Cyan-200);
+    color: var(--Cyan-300);
 }
 
 .donation {
@@ -108,6 +113,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.donation:hover {
+    background-color: var(--Orange-200);
 }
 
 .littleImg {
