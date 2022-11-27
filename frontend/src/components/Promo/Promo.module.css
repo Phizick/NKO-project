@@ -1,0 +1,295 @@
+.promo {
+    margin: 0 auto;
+    max-width: 1232px;
+    background-image: url(../../images/group.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--Cyan-300);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 153px;
+    padding-bottom: 153px;
+}
+
+.title {
+    max-width: 816px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--Gradation-100);
+    font-family: 'Sreda';
+    font-style: normal;
+    margin: 0;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.image {
+    box-sizing: border-box;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #2C5F72;
+    border-radius: 48px;
+    margin-left: -20px;
+    margin-bottom: -13px;
+}
+
+.image:first-of-type {
+    margin-left: 5px;
+}
+
+.image:last-of-type {
+    margin-right: 5px;
+}
+
+.subtitle {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--Gradation-100);
+    margin-top: 16px;
+    margin-bottom: 24px;
+    max-width: 816px;
+}
+
+.links {
+    display: flex;
+    max-width: 816px;
+    flex-direction: row;
+    justify-content: center;
+    height: 48px;
+    margin: 0;
+}
+
+.aboutUs {
+    height: 100%;
+    width: 153px;
+    text-decoration: none;
+    color: var(--Gradation-100);
+    border: 1px solid rgba(242, 242, 243, 0.1);
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 16px 0 0;
+}
+
+.donation {
+    width: 230px;
+    height: 100%;
+    background-color: var(--Orange-300);
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--Gradation-100);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.littleImg {
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 1440px) {
+    .promo {
+        margin: 0 104px;
+        width: calc(100% - 208px);
+    }
+}
+
+@media (max-width: 1300px) {
+    .promo {
+        margin: 0 50px;
+        width: calc(100% - 100px);
+    }
+
+    .title {
+        font-size: 35px;
+        line-height: 40px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    
+    .image {
+        width: 40px;
+        height: 40px;
+        margin-left: -15px;
+        margin-bottom: -10px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    
+    .aboutUs {
+        font-size: 12px;
+    }
+    
+    .donation {
+        font-size: 12px;
+    }
+
+    .links {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    
+    .littleImg {
+        margin-left: 8px;
+        width: 14px;
+        height: 14px;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    .promo {
+        margin: 0 70px;
+        width: calc(100% - 140px);
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .image {
+        width: 33px;
+        height: 33px;
+        margin-left: -10px;
+        margin-bottom: -7px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .aboutUs {
+        font-size: 10px;
+        line-height: 30px;
+    }
+    
+    .donation {
+        font-size: 10px;
+        line-height: 30px;
+    }
+
+    .links {
+        height: 30px;
+    }
+    
+    .littleImg {
+        margin-left: 6px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 751px) {
+    .promo {
+        background-image: url(../../images/groupMobile.png);
+        margin: 0;
+        width: 100%;
+        padding-top: 300px;
+        padding-bottom: 300px;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .image {
+        width: 90px;
+        height: 90px;
+        margin-left: -30px;
+        margin-bottom: 0;
+    }
+
+    .aboutUs {
+        font-size: 14px;
+        line-height: 48px;
+        width: 100%;
+    }
+    
+    .donation {
+        font-size: 14px;
+        line-height: 48px;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .littleImg {
+        height: 16px;
+        width: 16px;
+    }
+
+    .links {
+        margin: 50px 16px 0;
+        width: calc(100% - 32px);
+        height: 108px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 500px) {
+    .promo {
+        padding-top: 90px;
+        padding-bottom: 146px;
+    }
+    .images {
+        padding: 0;
+        margin-bottom: 8px;
+    }
+
+    .title {
+        font-size: 30px;
+        padding: 0;
+        margin-top: 8px;
+    }
+
+    .image {
+        width: 48px;
+        height: 48px;
+        margin-left: -15px;
+    }
+
+    .links {
+        margin: 32px 16px 0;
+        width: calc(100% - 32px);
+    }
+}
