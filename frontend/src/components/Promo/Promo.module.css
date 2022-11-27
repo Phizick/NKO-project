@@ -1,0 +1,101 @@
+.promo {
+    margin: 40px 104px 96px;
+    background-image: url(../../images/group.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--Cyan-300);
+    padding: 153px 208px;
+    border-radius: 20px;
+}
+
+.title {
+    font-family: Sreda;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--Gradation-100);
+    font-family: 'Sreda';
+    font-style: normal;
+    margin: 0;
+}
+
+.image {
+    box-sizing: border-box;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #2C5F72;
+    border-radius: 48px;
+    margin-left: -20px;
+    margin-bottom: -13px;
+}
+
+.image:first-of-type {
+    margin-left: 5px;
+}
+
+.image:last-of-type {
+    margin-right: 5px;
+}
+
+.subtitle {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--Gradation-100);
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 48px;
+    margin: 0;
+}
+
+.aboutUs {
+    height: 100%;
+    width: 153px;
+    text-decoration: none;
+    color: var(--Gradation-100);
+    border: 1px solid rgba(242, 242, 243, 0.1);
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 16px 0 0;
+}
+
+.donation {
+    width: 230px;
+    height: 100%;
+    background-color: var(--Orange-300);
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--Gradation-100);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.littleImg {
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+}
