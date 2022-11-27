@@ -18,7 +18,7 @@ function Promo() {
             <p className='promo__subtitle'>Lorem ipsum dolor sit amet consectetur. Massa sit a malesuada venenatis 
             lacinia. Viverra id leo viverra egestas purus. Gravida fermentum vitae sagittis sapien consectetur pellentesque.</p>
             <div className='promo__links'>
-                <Link to='/about-us' className='promo__about-us'>О нашем проекте</Link>
+                <Link to='/aboutus' className='promo__about-us'>О нашем проекте</Link>
                 <Link to='/donation' className='promo__donation'>Сделать пожертвование 
                     <img src={heart} alt='Сердечко' className='promo__little-img' />
                 </Link>
