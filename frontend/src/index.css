@@ -1,42 +1,40 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-
 
 /* variables */
 
 :root {
   /* Gradation */
-  --Gradation-700: #0C0D0D;
+  --Gradation-700: #0c0d0d;
   --Gradation-600: #242728;
-  --Gradation-500: #494E50;
+  --Gradation-500: #494e50;
   --Gradation-400: #798286;
-  --Gradation-300: #AFB4B6;
-  --Gradation-200: #EFF0F0;
-  --Gradation-100: #FCFCFD;
+  --Gradation-300: #afb4b6;
+  --Gradation-200: #eff0f0;
+  --Gradation-100: #fcfcfd;
   /* Orange */
-  --Orange-300: #E75D22;
-  --Orange-200: #EB855A;
-  --Orange-100: #F2D0C2;
+  --Orange-300: #e75d22;
+  --Orange-200: #eb855a;
+  --Orange-100: #f2d0c2;
   /* Cyan */
-  --Cyan-300: #164F64;
-  --Cyan-200: #BED4DC;
-  --Cyan-100: ##DEE9ED;
+  --Cyan-300: #164f64;
+  --Cyan-200: #bed4dc;
+  --Cyan-100: #dee9ed;
   /* Yellow */
-  --Yellow-300: #FFC935;
-  --Yellow-200: ##F6D477;
-  --Yellow-100: #F4E6BD;
+  --Yellow-300: #ffc935;
+  --Yellow-200: #f6d477;
+  --Yellow-100: #f4e6bd;
   /* Tint */
   --Tint-Heavy: rgba(12, 13, 13, 0.6);
   --Tint-Light: rgba(12, 13, 13, 0.3);
