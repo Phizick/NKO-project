@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+.div {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 40px;
+}
+
+.title {
+  font-family: Inter;
+  font-size: 60px;
+  line-height: 120%;
+  margin: 0;
+}
+
+.text {
+  font-family: Inter;
+  max-width: 600px;
+  margin: 0;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.button {
+  font-family: Inter;
+  font-size: 18px;
+  background-color: var(--Orange-300);
+  border: 0;
+  padding: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.button:hover {
+  opacity: .7;
+}
