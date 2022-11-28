@@ -1,3 +1,5 @@
+@import url('./vendor/normalize.css');
+@import url('./vendor/fonts.css');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -32,7 +34,7 @@ code {
   /* Cyan */
   --Cyan-300: #164F64;
   --Cyan-200: #BED4DC;
-  --Cyan-100: ##DEE9ED;
+  --Cyan-100: #DEE9ED;
   /* Yellow */
   --Yellow-300: #FFC935;
   --Yellow-200: ##F6D477;
