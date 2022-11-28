@@ -1,14 +1,15 @@
 
 import Promo from "../../components/Promo/Promo";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 export const MainPage = () => {
   return (
     <div>
       <Header />
       <h1>MainPage</h1>
-      <Footer/>
       <Promo />
+      <Footer/>
     </div>
   );
 };
