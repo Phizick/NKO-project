@@ -1,4 +1,4 @@
-import stylePage from "../styles/Home.module.css";
+import  "../styles/Home.css";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Promo from "../components/Promo/Promo";
@@ -7,7 +7,7 @@ import Partners from "../components/Partners/Partners";
 import Questions from "../components/Questions/Questions";
 function Page() {
   return (
-    <div className={stylePage.App}>
+    <div className="App">
       <Header />
       <Promo />
       <Programs />
