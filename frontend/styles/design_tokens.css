@@ -1,0 +1,32 @@
+:root {
+  /* Gradation */
+  --Gradation-700: #0C0D0D;
+  --Gradation-600: #242728;
+  --Gradation-500: #494E50;
+  --Gradation-400: #798286;
+  --Gradation-300: #AFB4B6;
+  --Gradation-200: #EFF0F0;
+  --Gradation-100: #FCFCFD;
+  /* Orange */
+  --Orange-300: #E75D22;
+  --Orange-200: #EB855A;
+  --Orange-100: #F2D0C2;
+  /* Cyan */
+  --Cyan-300: #164F64;
+  --Cyan-200: #BED4DC;
+  --Cyan-100: #DEE9ED;
+  /* Yellow */
+  --Yellow-300: #FFC935;
+  --Yellow-200: #F6D477;
+  --Yellow-100: #F4E6BD;
+  /* Tint */
+  --Tint-Heavy: rgba(12, 13, 13, 0.6);
+  --Tint-Light: rgba(12, 13, 13, 0.3);
+  /* Highlight */
+  --Highlight-Heavy: rgba(242, 242, 243, 0.1);
+  --Highlight-Light: rgba(242, 242, 243, 0.05);
+  /* Spacing */
+  --Spacing-Size: rgba(255, 2, 2, 0.3);
+  --Spacing-Text: rgba(255, 2, 2, 0.1);
+  --Spacing-Background: rgba(255, 2, 2, 0.03);
+}
