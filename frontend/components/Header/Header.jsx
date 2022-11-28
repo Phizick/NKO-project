@@ -1,34 +1,16 @@
 import BurgerMenu from "./BurgerMenu";
 import Link from "next/link";
-import "./Header.component.css";
+import styles from "./Header.module.css";
+import BurgerMenuSVG from "./burgerMenuSVG";
 
-export const Header = () => {
-  const handleMenuClick = () => {
-    document.querySelector(".dropdown-content").classList.toggle("show");
-  };
+function Header() {
   return (
-    <>
-      {/* <div className="header-container">
-        <div className="logo-container">
+    <header>
+      <div className={styles.header_container}>
+        <div className={styles.logo_container}>
+          <BurgerMenuSVG />
           <svg
-            className="burger-menu"
-            onClick={handleMenuClick}
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2.5 5H17.5M2.5 10H17.5M2.5 15H17.5"
-              stroke="#164F64"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <svg
-            className="logo-sm"
+            className={styles.logo_sm}
             width="107"
             height="32"
             viewBox="0 0 107 32"
@@ -83,9 +65,10 @@ export const Header = () => {
               </clipPath>
             </defs>
           </svg>
-          <div className="logo">
+
+          <div className={styles.logo}>
             <svg
-              className="logo-xl"
+              className={styles.logo_xl}
               width="134"
               height="40"
               viewBox="0 0 134 40"
@@ -141,7 +124,7 @@ export const Header = () => {
               </defs>
             </svg>
           </div>
-          <div className="vector-5">
+          <div className={styles.vector_5}>
             <svg
               width="2"
               height="42"
@@ -156,25 +139,25 @@ export const Header = () => {
               />
             </svg>
           </div>
-          <p className="text-content">
+          <p className={styles.text_content}>
             Центр помощи людям с ментальными нарушениями
           </p>
         </div>
-        <div className="links-container">
-          <div className="links">
-            <Link to="/about-us" className="links-text">
+        <div className={styles.links_container}>
+          <div className={styles.links}>
+            <Link href="/about-us" className={styles.links_text}>
               О Нас
             </Link>
-            <Link href="/news" className="links-text">
+            <Link href="/news" className={styles.links_text}>
               Новости
             </Link>
-            <Link href="/events" className="links-text">
+            <Link href="/events" className={styles.links_text}>
               Мероприятия
             </Link>
-            <Link href="/useful" className="links-text">
+            <Link href="/useful" className={styles.links_text}>
               Полезное
             </Link>
-            <button className="button" onClick={() => console.log('donate')}>
+            <button className={styles.button}>
               Пожертвовать
               <svg
                 width="16"
@@ -191,11 +174,11 @@ export const Header = () => {
             </button>
           </div>
         </div>
-      </div> */}
+      </div>
       <div></div>
       <BurgerMenu />
-    </>
+    </header>
   );
-};
+}
 
 export default Header;
