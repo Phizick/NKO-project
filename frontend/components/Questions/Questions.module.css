@@ -12,6 +12,9 @@
   .question_component {
     margin-top: 20px;
     margin-bottom: 80px;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
   }
 
   .questions {

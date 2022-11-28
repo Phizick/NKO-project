@@ -1,9 +1,9 @@
 @import url(../vendor/fonts/fonts.css);
 body {
   margin: 0px;
+  overflow-x: hidden;
 }
 .App {
   text-align: center;
   font-family: Inter;
 }
-
