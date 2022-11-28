@@ -1,50 +1,52 @@
 import React from "react";
-import "./Footer.css";
+import styles from './Footer.module.css';
 import telegram from "../../images/telegram.svg";
+import vk from "../../images/vk.svg";
+import ok from "../../images/ok.svg";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer__container">
-        <div className="footer__column-find">
-          <h3 class="footer__column-heading">Поиск по сайту</h3>
-            <form className="footer__search-form" >
-              <input type="search" className="footer__form-input" placeholder="Поиск по сайту"/>
-              <button className="footer__form-btn"></button>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <div className={styles.columnfind}>
+          <h3 className={styles.heading}>Поиск по сайту</h3>
+            <form className={styles.searchform} >
+              <input type="search" className={styles.forminput} placeholder="Поиск по сайту"/>
+              <button className={styles.formbtn}></button>
             </form>
         </div>
-        <div className="footer__column_content">
-          <div className="footer__column_content_info">
-            <h3 className="footer__column-heading">Навигация</h3>
-            <nav className="footer__column-links">
-              <a href='/aboutus' className="footer__column-link">О нас</a>
-              <a href='/news' className="footer__column-link">Новости</a>
-              <a href='/events' className="footer__column-link">Мероприятия</a>
-              <a href='/library' className="footer__column-link">Библиотека</a>
-              <a href='/boardquest' className="footer__column-link">Вопрос - ответ</a>
+        <div className={styles.content}>
+          <div className={styles.contentinfo}>
+            <h3 className={styles.heading}>Навигация</h3>
+            <nav className={styles.links}>
+              <a href='/aboutus' className={styles.link}>О нас</a>
+              <a href='/news' className={styles.link}>Новости</a>
+              <a href='/events' className={styles.link}>Мероприятия</a>
+              <a href='/library' className={styles.link}>Библиотека</a>
+              <a href='/boardquest' className={styles.link}>Вопрос - ответ</a>
             </nav>
           </div>
-          <div className="footer__column_content_social">
-            <h3 className="footer__column-heading">Контакты</h3>
-            <nav className="footer__column-links">
-              <a href='#' className="footer__column-link">
-                <img src={telegram} alt="Телеграм" className="footer__social-icon"/>
+          <div className={styles.contentsocial}>
+            <h3 className={styles.heading}>Контакты</h3>
+            <nav className={styles.sociallinks}>
+              <a href='#' className={styles.sociallink} target="_blank">
+                <img src={telegram} alt="Телеграм" className={styles.socialicon}/>
               </a>
-              <a href='https://vk.com/fondmotionfoundation' className="footer__column-link">
-                <img src="images/vk.svg" alt="ВКонтакте" className="footer__social-icon"/>
+              <a href='https://vk.com/fondmotionfoundation' className={styles.link} target="_blank">
+                <img src={vk} className={styles.socialicon}/>
               </a>
-              <a href='#' className="footer__column-link">
-                <img src="images/ok.svg" alt="Одноклассники" className="footer__social-icon"/>
+              <a href='#' className={styles.link} target="_blank">
+                <img src={ok} alt="Одноклассники" className={styles.socialicon}/>
               </a>
             </nav>
-            <p className="footer__column-link">+7 921 971 2439</p>
-            <p className="footer__column-link">motionfoundation@mail.ru</p>
+            <p className={styles.info}>+7 921 971 2439</p>
+            <p className={styles.info}>motionfoundation@mail.ru</p>
           </div>
         </div>
       </div>
-      <div className="footer__content_copyright">
-        <p className="footer__copyright">&copy; 2022 Благотворительный фонд "Движение"</p>
-        <p className="footer__copyright">Designed by Artem Korolev</p>
+      <div className={styles.contentcopyright}>
+        <p className={styles.copyright}>&copy; 2022 Благотворительный фонд "Движение"</p>
+        <p className={styles.copyright}>Designed by Artem Korolev</p>
       </div>
     </footer>
   );
