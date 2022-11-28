@@ -110,6 +110,15 @@
     justify-content: center;
 }
 
+.aboutUs:hover {
+    background-color:  var(--Cyan-200);
+    color: var(--Cyan-300);
+}
+
+.donation:hover {
+    background-color: var(--Orange-200);
+}
+
 .littleImg {
     margin-left: 8px;
     width: 16px;
