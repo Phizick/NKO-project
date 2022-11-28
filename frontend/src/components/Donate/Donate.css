@@ -1,0 +1,314 @@
+.donate {
+	margin: 0 auto;
+	max-width: 1440px;
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	background-color: var(--Gradation-100);
+	--linear-anim: all .2s linear;
+}
+.donate__title {
+	font-family: 'Sreda', serif;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 100%;
+	text-align: center;
+	color: var(--Cyan-300);
+	margin: 38px auto 26px;
+}
+.donate__title_type_root {
+	font-size: 40px;
+	line-height: 125%;
+	color: var(--Gradation-700);
+}
+.donate__paragraph {
+	margin: 0;
+	padding: 0;
+	font-family: 'Sreda';
+	font-weight: 400;
+	font-size: 80px;
+	line-height: 100%;
+	text-align: center;
+	color: var(--Cyan-300);
+}
+.donate__reasons {
+	background: var(--Gradation-200);
+	display: inline-block;
+	margin: 0 auto;
+}
+.donate__reasons-title {
+	margin: 42px auto 0;
+	font-family: 'Sreda';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 125%;
+	text-align: center;
+	color: var(--Gradation-700);
+}
+.donate__reasons-list {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 auto 40px;
+	gap: 16px;
+	width: calc(100% - 7.22% * 2);
+}
+.donate__reason {
+	display: flex;
+	gap: 22px;
+	margin: 16px 0 0;
+	padding: 25px 17px 25px 24px;
+	background-color: var(--Gradation-100);
+	align-items: center;
+	text-align: left;
+}
+.donate__reason-image {
+	width: 80px;
+	height: 80px;
+}
+.donate__reason-title {
+	margin: 0;
+	font-family: 'Sreda';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 125%;
+	color: var(--Gradation-700);
+}
+.donate__reason-description {
+	margin: 0;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	color: var(--Gradation-600);
+}
+.donate__container {
+	background-color: var(--Cyan-300);
+	padding: 68px 104px;
+	width: fit-content;
+	margin: 60px auto;
+	border-radius: 20px;
+}
+.donate__container_page_root {
+	background-color: var(--Orange-300);
+}
+.donate__form {
+	background-color: var(--Gradation-100);
+	border-radius: 10px;
+	max-width: 1010px;
+	width: 100vw;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 391px 386px;
+	grid-template-rows: 111px 29px 65px 92px 54px 64px 85px;
+  gap: 0px 51px;
+  grid-template-areas: 
+    "img switchers"
+    "img title"
+    "img donation-row1"
+    "img donation-row2"
+    "img anonim"
+    "img submit"
+    "img offer";
+}
+.donate__form-switchers {
+	grid-area: switchers;
+	margin: 39px 0 0;
+	display: flex;
+	align-items: flex-start;
+	gap: 44px;
+}
+.donate__form-switcher {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	text-align: center;
+	color: #242728;
+	background-color: inherit;
+	border: none;
+	padding: 0 0 12px;
+	transition: var(--linear-anim);
+}
+.donate__form-switcher_type_active {
+	color: var(--Orange-300);
+	font-weight: 500;
+	padding: 0 6px 12px;
+	border-bottom: 1px solid var(--Orange-300);
+}
+.donate__form-image {
+	margin: 40px 0 40px 24px;
+	width: 368px;
+	height: 420px;
+	object-fit: none;
+	object-position: center center;
+	grid-area: img;
+}
+.donate__form-title {
+	grid-area: title;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 125%;
+	color: var(--Gradation-500);
+	text-align: left;
+	margin: 0;
+}
+.donate__donation-container {
+	grid-area: donation-row1;
+	transition: var(--linear-anim);
+	visibility: visible;
+	opacity: 1;
+	display: flex;
+	gap: 10px;
+}
+.donate__donation-container:last-of-type {
+	grid-area: donation-row2;
+}
+.donate__form-donation {
+	background-color: var(--Cyan-100);
+	border: none;
+	padding: 0;
+	transition: var(--linear-anim);
+	border-radius: 5px;
+	width: 122px;
+	height: 56px;
+	font-family: 'Sreda';
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 125%;
+	text-align: center;
+	color: var(--Cyan-300);
+	display: table-cell;
+	vertical-align: middle;
+}
+.donate__form-radio:checked ~ .donate__form-donation {
+	background-color: var(--Cyan-300);
+	color: var(--Gradation-100);
+}
+.donate__form-label {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	grid-area: donation-row2;
+	transition: var(--linear-anim);
+}
+.donate__form-label:last-of-type {
+	justify-content: space-between;
+	flex-direction: row;
+	height: min-content;
+	padding-bottom: 8px;
+	border-bottom: 1px solid var(--Gradation-300);
+	grid-area: anonim;
+}
+.donate__form-span {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 125%;
+	color: var(--Gradation-500);
+}
+.donate__form-span:last-of-type {
+	font-size: 14px;
+	line-height: 150%;
+}
+.donate__form-input {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	border: none;
+	outline: none;
+	background-color: var(--Gradation-200);
+	color: var(--Gradation-500);
+	padding: 14px;
+	margin: 9px 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	appearance: none;
+	-webkit-appearance: none;
+	margin: 0;
+}
+.donate__form-label-radio {
+	position: relative;
+}
+.donate__form-radio {
+	box-sizing: border-box;
+	padding: 0;
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.donate__form-checkbox {
+	position: relative;
+	width: 32px;
+	height: 20px;
+	padding: 0;
+	margin: 0;
+}
+.donate__form-checkbox::before {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+	background-color: var(--Gradation-200);
+	border: 1px solid var(--Gradation-300);
+	border-radius: 5px;
+	transition: var(--linear-anim);
+}
+.donate__form-checkbox::after {
+	position: absolute;
+	content: '';
+	top: 3px;
+	bottom: 3px;
+	left: 3px;
+	right: 15px;
+	border-radius: 2.5px;
+	background-color: var(--Gradation-400);
+	transition: var(--linear-anim);
+}
+.donate__form-checkbox:checked::before {
+	background-color: var(--Orange-300);
+	border-color: var(--Highlight-Heavy);
+}
+.donate__form-checkbox:checked::after {
+	background-color: var(--Gradation-100);
+	right: 3px;
+	left: 15px;
+}
+.donate__form-element_type_hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+.donate__form-submit {
+	margin: 0;
+	padding: 0;
+	background-color: var(--Orange-300);
+	border-radius: 5px;
+	border: none;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	vertical-align: middle;
+	color: var(--Gradation-100);
+	max-width: 206px;
+	max-height: 48px;
+}
+.donate__form-offer {
+	grid-area: offer;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 125%;
+	color: var(--Gradation-500);
+	text-align: left;
+}
+.donate__form-link {
+	color: inherit;
+	font-weight: 500;
+	text-decoration: none;
+	border-bottom: 1px solid var(--Gradation-500);
+}
