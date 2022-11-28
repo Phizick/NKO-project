@@ -11,7 +11,6 @@ export const MainPage = () => {
       <Header />
       <Promo />
       <Programs/>
-            <Promo />
             <Partners />
             <Footer/>
     </div>
