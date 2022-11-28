@@ -1,4 +1,5 @@
 import styles from "./news.module.css";
+import '../../styles/design_tokens.css';
 import image from "../../images/news.png";
 import Image from "next/image";
 import Link from "next/link";

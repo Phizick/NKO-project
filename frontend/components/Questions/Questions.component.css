@@ -9,7 +9,7 @@
 
 @media screen and (min-width: 0px) {
   /* Отступы на моб. устройствах */
-  .question-component {
+  .question_component {
     margin-top: 20px;
     margin-bottom: 80px;
   }
@@ -21,7 +21,7 @@
     position: relative;
   }
 
-  .question-panel {
+  .question_panel {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -29,14 +29,14 @@
     padding: 0px;
     z-index: 4;
 
-    width: 100vw;
+    width: 100%;
 
     background: var(--Gradation-100);
 
     border-bottom: 1px solid var(--Gradation-300);
   }
 
-  .question-header {
+  .question_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,7 +45,7 @@
     position: relative;
     z-index: 5;
 
-    width: 100vw;
+    width: 100%;
     height: 64px;
 
     border-bottom: 1px solid var(--Gradation-300);
@@ -62,7 +62,7 @@
     color: var(--Gradation-700);
   }
 
-  .question-header button {
+  .question_header button {
     border: none;
     position: relative;
     z-index: 15;
@@ -70,11 +70,11 @@
     margin-right: 16px;
   }
 
-  .question-header button:hover {
+  .question_header button:hover {
     cursor: pointer;
   }
 
-  .footer-text {
+  .footer_text {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
@@ -86,7 +86,7 @@
     text-align: start;
   }
 
-  .question-footer {
+  .question_footer {
     position: relative;
     z-index: 2;
     margin-top: -88px;
@@ -109,7 +109,7 @@
     transition: linear 0.12s;
   }
 
-  .footer-text {
+  .footer_text {
     z-index: 2;
     position: relative;
   }
@@ -122,24 +122,24 @@
     align-items: center;
     position: relative;
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
   }
 
-  .question-panel {
+  .question_panel {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
 
-    width: 100vw;
+    width: 100%;
 
     background: var(--Gradation-100);
 
     border-bottom: 1px solid var(--Gradation-300);
   }
 
-  .question-header {
+  .question_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -148,7 +148,7 @@
     position: relative;
     z-index: 5;
 
-    width: 100vw;
+    width: 100%;
     height: 64px;
 
     border-bottom: 1px solid var(--Gradation-300);
@@ -164,7 +164,7 @@
     color: var(--Gradation-700);
   }
 
-  .question-header button {
+  .question_header button {
     border: none;
     position: relative;
     background: none;
@@ -172,11 +172,11 @@
     z-index: 15;
   }
 
-  .question-header button:hover {
+  .question_header button:hover {
     cursor: pointer;
   }
 
-  .footer-text {
+  .footer_text {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
@@ -189,7 +189,7 @@
     text-align: start;
   }
 
-  .question-footer {
+  .question_footer {
     position: relative;
     z-index: 0;
     margin-top: -88px;
@@ -219,7 +219,7 @@
     position: relative;
   }
 
-  .question-panel {
+  .question_panel {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -227,14 +227,14 @@
     padding: 0px;
     z-index: 4;
 
-    width: 100vw;
+    width: 100%;
 
     background: var(--Gradation-100);
 
     border-bottom: 1px solid var(--Gradation-300);
   }
 
-  .question-header {
+  .question_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -243,7 +243,7 @@
     position: relative;
     z-index: 5;
 
-    width: 100vw;
+    width: 100%;
     height: 64px;
 
     border-bottom: 1px solid var(--Gradation-300);
@@ -260,7 +260,7 @@
     color: var(--Gradation-700);
   }
 
-  .question-header button {
+  .question_header button {
     border: none;
     position: relative;
     z-index: 15;
@@ -268,11 +268,11 @@
     margin-right: 16px;
   }
 
-  .question-header button:hover {
+  .question_header button:hover {
     cursor: pointer;
   }
 
-  .footer-text {
+  .footer_text {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
@@ -284,7 +284,7 @@
     text-align: start;
   }
 
-  .question-footer {
+  .question_footer {
     position: relative;
     z-index: 2;
     margin-top: -88px;
@@ -321,7 +321,7 @@
     position: relative;
   }
 
-  .question-panel {
+  .question_panel {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -329,14 +329,14 @@
     padding: 0px;
     z-index: 4;
 
-    width: 100vw;
+    width: 100%;
 
     background: var(--Gradation-100);
 
     border-bottom: 1px solid var(--Gradation-300);
   }
 
-  .question-header {
+  .question_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -345,7 +345,7 @@
     position: relative;
     z-index: 5;
 
-    width: 100vw;
+    width: 100%;
     height: 64px;
 
     border-bottom: 1px solid var(--Gradation-300);
@@ -362,7 +362,7 @@
     color: var(--Gradation-700);
   }
 
-  .question-header button {
+  .question_header button {
     border: none;
     position: relative;
     z-index: 15;
@@ -370,11 +370,11 @@
     margin-right: 16px;
   }
 
-  .question-header button:hover {
+  .question_header button:hover {
     cursor: pointer;
   }
 
-  .footer-text {
+  .footer_text {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
@@ -386,7 +386,7 @@
     text-align: start;
   }
 
-  .question-footer {
+  .question_footer {
     position: relative;
     z-index: 2;
     margin-top: -88px;
@@ -409,7 +409,7 @@
     transition: linear 0.12s;
   }
 
-  .footer-text {
+  .footer_text {
     z-index: 2;
     position: relative;
   }
@@ -417,7 +417,7 @@
 
 @media screen and (min-width: 850px) {
   /* Отступы на широких экранах */
-  .question-component {
+  .question_component {
     margin-top: 24px;
     margin-bottom: 112px;
   }
@@ -428,7 +428,7 @@
     position: relative;
   }
 
-  .question-panel {
+  .question_panel {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -443,7 +443,7 @@
     border-bottom: 1px solid var(--Gradation-300);
   }
 
-  .question-header {
+  .question_header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -469,16 +469,16 @@
     color: var(--Gradation-700);
   }
 
-  .question-header button {
+  .question_header button {
     border: none;
     background: none;
   }
 
-  .question-header button:hover {
+  .question_header button:hover {
     cursor: pointer;
   }
 
-  .footer-text {
+  .footer_text {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
@@ -490,7 +490,7 @@
     text-align: start;
   }
 
-  .question-footer {
+  .question_footer {
     position: relative;
     z-index: 2;
     margin-top: -88px;
@@ -513,7 +513,7 @@
     transition: linear 0.12s;
   }
 
-  .footer-text {
+  .footer_text {
     z-index: 2;
     position: relative;
   }
