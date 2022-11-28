@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @font-face {
   font-family: "Sreda";
-  src: url("../../vendor/Sreda.ttf") format("truetype");
+  src: url("../../vendor/fonts/Sreda.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -19,6 +19,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   .question_panel {

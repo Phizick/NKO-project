@@ -1,5 +1,5 @@
 import QuestionsComponent from "./QuestionsComponent";
-import styles from "./Questions.model.css";
+import styles from "./Questions.module.css";
 
 function Questions() {
   return (
