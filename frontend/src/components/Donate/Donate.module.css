@@ -35,7 +35,7 @@
 	display: inline-block;
 	margin: 0 auto;
 }
-.donate__reasons-title {
+.donate__reasonsTitle {
 	margin: 42px auto 0;
 	font-family: 'Sreda';
 	font-style: normal;
@@ -45,7 +45,7 @@
 	text-align: center;
 	color: var(--Gradation-700);
 }
-.donate__reasons-list {
+.donate__reasonsList {
 	display: flex;
 	list-style-type: none;
 	padding: 0;
@@ -62,11 +62,11 @@
 	align-items: center;
 	text-align: left;
 }
-.donate__reason-image {
+.donate__reasonImage {
 	width: 80px;
 	height: 80px;
 }
-.donate__reason-title {
+.donate__reasonTitle {
 	margin: 0;
 	font-family: 'Sreda';
 	font-weight: 400;
@@ -74,7 +74,7 @@
 	line-height: 125%;
 	color: var(--Gradation-700);
 }
-.donate__reason-description {
+.donate__reasonDescription {
 	margin: 0;
 	font-weight: 400;
 	font-size: 14px;
@@ -110,14 +110,14 @@
     "img submit"
     "img offer";
 }
-.donate__form-switchers {
+.donate__formSwitchers {
 	grid-area: switchers;
 	margin: 39px 0 0;
 	display: flex;
 	align-items: flex-start;
 	gap: 44px;
 }
-.donate__form-switcher {
+.donate__formSwitcher {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 150%;
@@ -128,13 +128,13 @@
 	padding: 0 0 12px;
 	transition: var(--linear-anim);
 }
-.donate__form-switcher_type_active {
+.donate__formSwitcher_type_active {
 	color: var(--Orange-300);
 	font-weight: 500;
 	padding: 0 6px 12px;
 	border-bottom: 1px solid var(--Orange-300);
 }
-.donate__form-image {
+.donate__formImage {
 	margin: 40px 0 40px 24px;
 	width: 368px;
 	height: 420px;
@@ -142,7 +142,7 @@
 	object-position: center center;
 	grid-area: img;
 }
-.donate__form-title {
+.donate__formTitle {
 	grid-area: title;
 	font-weight: 400;
 	font-size: 12px;
@@ -151,7 +151,7 @@
 	text-align: left;
 	margin: 0;
 }
-.donate__donation-container {
+.donate__donationContainer {
 	grid-area: donation-row1;
 	transition: var(--linear-anim);
 	visibility: visible;
@@ -159,10 +159,10 @@
 	display: flex;
 	gap: 10px;
 }
-.donate__donation-container:last-of-type {
+.donate__donationContainer:last-of-type {
 	grid-area: donation-row2;
 }
-.donate__form-donation {
+.donate__formDonation {
 	background-color: var(--Cyan-100);
 	border: none;
 	padding: 0;
@@ -179,18 +179,18 @@
 	display: table-cell;
 	vertical-align: middle;
 }
-.donate__form-radio:checked ~ .donate__form-donation {
+.donate__formRadio:checked ~ .donate__form-donation {
 	background-color: var(--Cyan-300);
 	color: var(--Gradation-100);
 }
-.donate__form-label {
+.donate__formLabel {
 	display: flex;
 	flex-direction: column;
 	text-align: left;
 	grid-area: donation-row2;
 	transition: var(--linear-anim);
 }
-.donate__form-label:last-of-type {
+.donate__formLabel:last-of-type {
 	justify-content: space-between;
 	flex-direction: row;
 	height: min-content;
@@ -198,17 +198,17 @@
 	border-bottom: 1px solid var(--Gradation-300);
 	grid-area: anonim;
 }
-.donate__form-span {
+.donate__formSpan {
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 125%;
 	color: var(--Gradation-500);
 }
-.donate__form-span:last-of-type {
+.donate__formSpan:last-of-type {
 	font-size: 14px;
 	line-height: 150%;
 }
-.donate__form-input {
+.donate__formInput {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 150%;
@@ -225,10 +225,10 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
-.donate__form-label-radio {
+.donate__formLabelRadio {
 	position: relative;
 }
-.donate__form-radio {
+.donate__formRadio {
 	box-sizing: border-box;
 	padding: 0;
 	visibility: hidden;
@@ -240,14 +240,14 @@ input::-webkit-inner-spin-button {
 	right: 0;
 	bottom: 0;
 }
-.donate__form-checkbox {
+.donate__formCheckbox {
 	position: relative;
 	width: 32px;
 	height: 20px;
 	padding: 0;
 	margin: 0;
 }
-.donate__form-checkbox::before {
+.donate__formCheckbox::before {
 	position: absolute;
 	content: '';
 	bottom: 0;
@@ -259,7 +259,7 @@ input::-webkit-inner-spin-button {
 	border-radius: 5px;
 	transition: var(--linear-anim);
 }
-.donate__form-checkbox::after {
+.donate__formCheckbox::after {
 	position: absolute;
 	content: '';
 	top: 3px;
@@ -270,20 +270,21 @@ input::-webkit-inner-spin-button {
 	background-color: var(--Gradation-400);
 	transition: var(--linear-anim);
 }
-.donate__form-checkbox:checked::before {
+.donate__formCheckbox:checked::before {
 	background-color: var(--Orange-300);
 	border-color: var(--Highlight-Heavy);
 }
-.donate__form-checkbox:checked::after {
+.donate__formCheckbox:checked::after {
 	background-color: var(--Gradation-100);
 	right: 3px;
 	left: 15px;
 }
-.donate__form-element_type_hidden {
+.donate__formElement_type_hidden {
 	visibility: hidden;
 	opacity: 0;
 }
-.donate__form-submit {
+.donate__formSubmit {
+	grid-area: submit;
 	margin: 0;
 	padding: 0;
 	background-color: var(--Orange-300);
@@ -298,7 +299,7 @@ input::-webkit-inner-spin-button {
 	max-width: 206px;
 	max-height: 48px;
 }
-.donate__form-offer {
+.donate__formOffer {
 	grid-area: offer;
 	font-weight: 400;
 	font-size: 12px;
@@ -306,7 +307,7 @@ input::-webkit-inner-spin-button {
 	color: var(--Gradation-500);
 	text-align: left;
 }
-.donate__form-link {
+.donate__formLink {
 	color: inherit;
 	font-weight: 500;
 	text-decoration: none;

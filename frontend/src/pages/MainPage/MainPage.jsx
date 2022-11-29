@@ -1,6 +1,7 @@
 import DonateForm from "../../components/Donate/DonateForm";
 import DonateReason from "../../components/Donate/DonateReason";
 import "./MainPage.module.css";
+import DonateStyles from '../../components/Donate/Donate.module.css';
 
 export const MainPage = () => {
   return (
@@ -10,9 +11,9 @@ export const MainPage = () => {
       </div>
       <section className="donate">
         <DonateReason />
-        <h2 className="donate__title donate__title_type_root">Меняй мир к лучшему с нами!</h2>
-        <p className="donate__paragraph">более 1 000 человек</p>
-        <p className="donate__paragraph">уже получили помощь</p>
+        <h2 className={DonateStyles.donate__title + ' ' + DonateStyles.donate__title_type_root}>Меняй мир к лучшему с нами!</h2>
+        <p className={DonateStyles.donate__paragraph}>более 1 000 человек</p>
+        <p className={DonateStyles.donate__paragraph}>уже получили помощь</p>
         <DonateForm />
       </section>
     </>

@@ -1,18 +1,20 @@
-const DonateRadioButton = ({ value, onChange, donateAmount, checked }) => {
+import styles from '../../components/Donate/Donate.module.css';
+
+const DonateRadioButton = ({ value, className, onChange, donateAmount }) => {
 	const handeleRadio = () => {
 		onChange(value)
 	}
 	return (
-		<label htmlFor={value} className="donate__form-label-radio">
+		<label htmlFor={value} className={styles.donate__formLabelRadio}>
 			<input
 				type="radio"
 				name="donate"
 				id={value}
-				className="donate__form-radio"
+				className={styles.donate__formRadio}
 				onChange={handeleRadio}
 				checked={value === +donateAmount}
 			/>
-			<span className="donate__form-donation">{value + '₽'}</span>
+			<span className={styles.donate__formDonation}>{value + '₽'}</span>
 		</label>
 	);
 }

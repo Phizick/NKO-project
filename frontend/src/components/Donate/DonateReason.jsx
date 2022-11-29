@@ -1,31 +1,32 @@
 import staffImg from '../../images/donate_reason_type_staff.png';
 import logisticsImg from '../../images/donate_reason_type_logistics.png';
 import inventoryImg from '../../images/donate_reason_type_inventory.png';
+import styles from '../../components/Donate/Donate.module.css';
 
 const DonateReason = () => {
 	return (
-		<div className="donate__reasons">
-			<h3 className="donate__reasons-title">На что нужны пожертвования</h3>
-			<ul className="donate__reasons-list">
-					<li className="donate__reason">
-						<img className="donate__reason-image" src={staffImg} alt="схематичное изображение человека" />
-						<div className='donate__text'>
-							<h4 className="donate__reason-title">Зарплата персонала</h4>
-							<p className="donate__reason-description">Мы стараемся приглашать в фонд квалифицированных специалистов.</p>
+		<div className={styles.donate__reasons}>
+			<h3 className={styles.donate__reasonsTitle}>На что нужны пожертвования</h3>
+			<ul className={styles.donate__reasonsList}>
+					<li className={styles.donate__reason}>
+						<img className={styles.donate__reasonImage} src={staffImg} alt="схематичное изображение человека" />
+						<div className={styles.donate__text}>
+							<h4 className={styles.donate__reasonTitle}>Зарплата персонала</h4>
+							<p className={styles.donate__reasonDescription}>Мы стараемся приглашать в фонд квалифицированных специалистов.</p>
 						</div>
 					</li>
-					<li className="donate__reason">
-						<img className="donate__reason-image" src={inventoryImg} alt="схематичное изображение двух кисточек" />
-						<div className='donate__text'>
-							<h4 className="donate__reason-title">Инвентарь</h4>
-							<p className="donate__reason-description">Для проведения различных активностей требуется инвентарь.</p>
+					<li className={styles.donate__reason}>
+						<img className={styles.donate__reasonImage} src={inventoryImg} alt="схематичное изображение двух кисточек" />
+						<div className={styles.donate__text}>
+							<h4 className={styles.donate__reasonTitle}>Инвентарь</h4>
+							<p className={styles.donate__reasonDescription}>Для проведения различных активностей требуется инвентарь.</p>
 						</div>
 					</li>
-					<li className="donate__reason">
-						<img className="donate__reason-image" src={logisticsImg} alt="схематичное изображение коробки" />
-						<div className='donate__text'>
-							<h4 className="donate__reason-title">Логистика</h4>
-							<p className="donate__reason-description">Для проведения различных активностей требуется инвентарь.</p>
+					<li className={styles.donate__reason}>
+						<img className={styles.donate__reasonImage} src={logisticsImg} alt="схематичное изображение коробки" />
+						<div className={styles.donate__text}>
+							<h4 className={styles.donate__reasonTitle}>Логистика</h4>
+							<p className={styles.donate__reasonDescription}>Для проведения различных активностей требуется инвентарь.</p>
 						</div>
 					</li>
 				</ul>
