@@ -1,7 +1,11 @@
 import { Route, Switch } from "react-router-dom";
+import { ErrorPage } from "../../pages/ErrorPage/ErrorPage";
 import { MainPage } from "../../pages/MainPage/MainPage";
 import Donate from "../../pages/Donate/Donate";
+
 import styleApp from "./App.module.css";
+import {NewsPage} from "../../pages/NewsPage/NewsPage";
+import {UseFulPage} from "../../pages/UsefulPage/UseFullPage";
 
 export const App = () => {
   return (
@@ -10,11 +14,20 @@ export const App = () => {
         <Route path="/" exact={true}>
           <MainPage />
         </Route>
+        <Route path="/news" exact={true}>
+          <NewsPage />
+        </Route>
+        <Route path='/about-us' exact={true}>
+          <MainPage />
+        </Route>
+        <Route path='/useful' exact={true}>
+          <UseFulPage />
+        </Route>
         <Route path="/donation" exact={true}>
           <Donate />
         </Route>
         <Route path="*">
-          <h1>Error Page</h1>
+          <ErrorPage />
         </Route>
       </Switch>
     </div>

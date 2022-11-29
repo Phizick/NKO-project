@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@font-face {
+  font-family: "Sreda";
+  src: url("../../vendor/Sreda.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media screen and (min-width: 0px) {
+  /* Отступы на моб. устройствах */
+  .question-component {
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+
+  .questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .question-panel {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    z-index: 4;
+
+    width: 100vw;
+
+    background: var(--Gradation-100);
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .question-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    position: relative;
+    z-index: 5;
+
+    width: 100vw;
+    height: 64px;
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .title {
+    font-family: "Sreda";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    z-index: 5;
+    line-height: 125%;
+
+    color: var(--Gradation-700);
+  }
+
+  .question-header button {
+    border: none;
+    position: relative;
+    z-index: 15;
+    background: none;
+    margin-right: 16px;
+  }
+
+  .question-header button:hover {
+    cursor: pointer;
+  }
+
+  .footer-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 16px 0 24px 0;
+
+    color: var(--Gradation-600);
+    text-align: start;
+  }
+
+  .question-footer {
+    position: relative;
+    z-index: 2;
+    margin-top: -88px;
+    padding: 0px 12px;
+    transition: linear 0.25s;
+  }
+
+  .show {
+    margin-top: 0;
+  }
+
+  .hide {
+    margin-top: -190px;
+  }
+
+  .hideText {
+    opacity: 0;
+    position: relative;
+    z-index: 0;
+    transition: linear 0.12s;
+  }
+
+  .footer-text {
+    z-index: 2;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  .question-panel {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    width: 100vw;
+
+    background: var(--Gradation-100);
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .question-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    position: relative;
+    z-index: 5;
+
+    width: 100vw;
+    height: 64px;
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .title {
+    font-family: "Sreda";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 125%;
+
+    color: var(--Gradation-700);
+  }
+
+  .question-header button {
+    border: none;
+    position: relative;
+    background: none;
+    margin-right: 16px;
+    z-index: 15;
+  }
+
+  .question-header button:hover {
+    cursor: pointer;
+  }
+
+  .footer-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 16px 0 24px 0;
+    position: relative;
+
+    color: var(--Gradation-600);
+    text-align: start;
+  }
+
+  .question-footer {
+    position: relative;
+    z-index: 0;
+    margin-top: -88px;
+    padding: 0px 12px;
+    transition: linear 0.25s;
+  }
+
+  .show {
+    margin-top: 0;
+  }
+
+  .hide {
+    margin-top: -160px;
+  }
+
+  .hideText {
+    visibility: hidden;
+    transition: linear 0.12s;
+  }
+}
+
+@media screen and (min-width: 433px) {
+  .questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .question-panel {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    z-index: 4;
+
+    width: 100vw;
+
+    background: var(--Gradation-100);
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .question-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    position: relative;
+    z-index: 5;
+
+    width: 100vw;
+    height: 64px;
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .title {
+    font-family: "Sreda";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    z-index: 5;
+    line-height: 125%;
+
+    color: var(--Gradation-700);
+  }
+
+  .question-header button {
+    border: none;
+    position: relative;
+    z-index: 15;
+    background: none;
+    margin-right: 16px;
+  }
+
+  .question-header button:hover {
+    cursor: pointer;
+  }
+
+  .footer-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 16px 0 24px 0;
+
+    color: var(--Gradation-600);
+    text-align: start;
+  }
+
+  .question-footer {
+    position: relative;
+    z-index: 2;
+    margin-top: -88px;
+    padding: 0px 12px;
+    transition: linear 0.25s;
+  }
+
+  .show {
+    margin-top: 0;
+  }
+
+  .hide {
+    margin-top: -136px;
+  }
+
+  .hideText {
+    opacity: 0;
+    position: relative;
+    z-index: 0;
+    transition: linear 0.12s;
+  }
+
+  .footer-text {
+    z-index: 2;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .question-panel {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    z-index: 4;
+
+    width: 100vw;
+
+    background: var(--Gradation-100);
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .question-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    position: relative;
+    z-index: 5;
+
+    width: 100vw;
+    height: 64px;
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .title {
+    font-family: "Sreda";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    z-index: 5;
+    line-height: 125%;
+
+    color: var(--Gradation-700);
+  }
+
+  .question-header button {
+    border: none;
+    position: relative;
+    z-index: 15;
+    background: none;
+    margin-right: 16px;
+  }
+
+  .question-header button:hover {
+    cursor: pointer;
+  }
+
+  .footer-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 16px 0 24px 0;
+
+    color: var(--Gradation-600);
+    text-align: start;
+  }
+
+  .question-footer {
+    position: relative;
+    z-index: 2;
+    margin-top: -88px;
+    padding: 0px 12px;
+    transition: linear 0.25s;
+  }
+
+  .show {
+    margin-top: 0;
+  }
+
+  .hide {
+    margin-top: -112px;
+  }
+
+  .hideText {
+    opacity: 0;
+    position: relative;
+    z-index: 0;
+    transition: linear 0.12s;
+  }
+
+  .footer-text {
+    z-index: 2;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  /* Отступы на широких экранах */
+  .question-component {
+    margin-top: 24px;
+    margin-bottom: 112px;
+  }
+  .questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .question-panel {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    z-index: 4;
+
+    width: 838px;
+
+    background: var(--Gradation-100);
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .question-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 12px;
+    position: relative;
+    z-index: 5;
+
+    width: 814px;
+    height: 64px;
+
+    border-bottom: 1px solid var(--Gradation-300);
+  }
+
+  .title {
+    font-family: "Sreda";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    z-index: 5;
+    line-height: 125%;
+
+    color: var(--Gradation-700);
+  }
+
+  .question-header button {
+    border: none;
+    background: none;
+  }
+
+  .question-header button:hover {
+    cursor: pointer;
+  }
+
+  .footer-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 16px 0 24px 0;
+
+    color: var(--Gradation-600);
+    text-align: start;
+  }
+
+  .question-footer {
+    position: relative;
+    z-index: 2;
+    margin-top: -88px;
+    padding: 0px 12px;
+    transition: linear 0.25s;
+  }
+
+  .show {
+    margin-top: 0;
+  }
+
+  .hide {
+    margin-top: -88px;
+  }
+
+  .hideText {
+    opacity: 0;
+    position: relative;
+    z-index: 0;
+    transition: linear 0.12s;
+  }
+
+  .footer-text {
+    z-index: 2;
+    position: relative;
+  }
+}

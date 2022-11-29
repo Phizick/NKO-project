@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 9;
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  display: block;
+  background-color: var(--Gradation-100);
+  width: 100vw;
+  position: fixed;
+  top: -244px;
+  left: 0;
+  transition: all ease-out 0.5s;
+}
+.dropdown-content.show {
+  top: 56px;
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  border: 1px solid var(--Gradation-200);
+  color: var(--Gradation-500);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Inter";
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-decoration: none;
+}
