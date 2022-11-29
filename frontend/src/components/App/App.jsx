@@ -1,8 +1,10 @@
 import { Route, Switch } from "react-router-dom";
 import { ErrorPage } from "../../pages/ErrorPage/ErrorPage";
 import { MainPage } from "../../pages/MainPage/MainPage";
-import News from "../News/News";
+
 import styleApp from "./App.module.css";
+import {NewsPage} from "../../pages/NewsPage/NewsPage";
+import {UseFulPage} from "../../pages/UsefulPage/UseFullPage";
 
 export const App = () => {
   return (
@@ -12,7 +14,13 @@ export const App = () => {
           <MainPage />
         </Route>
         <Route path="/news" exact={true}>
-          <News/>
+          <NewsPage />
+        </Route>
+        <Route path='/about-us' exact={true}>
+          <MainPage />
+        </Route>
+        <Route path='/useful' exact={true}>
+          <UseFulPage />
         </Route>
         <Route path="*">
           <ErrorPage />

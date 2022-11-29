@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 function News() {
     return (
+        <>
         <div className={ styles.news }>
             <div className={ styles.content }>
                 <img src={image} alt='Картинка к новости' className={ styles.image } />
@@ -16,8 +17,8 @@ function News() {
                     <Link to='/news' className={ styles.link }>Смотреть другие новости</Link>
                 </div>
             </div>
-
         </div>
+        </>
     )
 }
 
