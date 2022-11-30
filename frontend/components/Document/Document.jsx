@@ -3,7 +3,11 @@ import style from './Document.module.css'
 
 function Document() {
   return (
-    <div>Document</div>
+    <>
+      <div>
+
+      </div>
+    </>
   )
 }
 

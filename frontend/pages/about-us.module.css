@@ -1,0 +1,48 @@
+.wrapper {
+  margin: auto;
+  background: var(--Gradation-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Sreda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  margin: 0;
+  padding-top: 27px;
+}
+
+.description {
+  max-width: 1232px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0;
+  padding-top: 35px;
+}
+
+.link {
+  text-decoration: none;
+  width: 206px;
+  height: 100%;
+  padding: 16px;
+  margin-top: 35px;
+  margin-bottom: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Orange-300);
+  border-radius: 5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--Gradation-100);
+}
