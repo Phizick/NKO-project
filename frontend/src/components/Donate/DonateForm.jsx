@@ -58,7 +58,7 @@ const DonateForm = () => {
 						className={styles.donate__formInput} onChange={(e) => donateHandler(e.target.value)} value={donateAmount} />
 					</label>
 				<label htmlFor="anonim" className={styles.donate__formLabel}>
-					<span className={styles.donate__formSpan}>Анонимное пожертвование</span>
+					<span className={styles.donate__formSpan + ' ' + styles.donate__formSpan_type_anonim}>Анонимное пожертвование</span>
 					<input type="checkbox" name="anonim" id="anonim" className={styles.donate__formCheckbox} onChange={handleAnonimus} checked={anonimus}/>
 				</label>
 				<button type="submit" className={styles.donate__formSubmit}>Сделать пожертвование</button>

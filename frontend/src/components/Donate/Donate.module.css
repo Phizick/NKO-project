@@ -1,9 +1,9 @@
 .donate {
 	margin: 0 auto;
 	max-width: 1440px;
+	min-width: 360px;
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
-	background-color: var(--Gradation-100);
 	--linear-anim: all .2s linear;
 }
 .donate__title {
@@ -11,9 +11,9 @@
 	font-weight: 400;
 	font-size: 64px;
 	line-height: 100%;
-	text-align: center;
+	text-align: left;
 	color: var(--Cyan-300);
-	margin: 38px auto 26px;
+	margin: 35px 104px 26px;
 }
 .donate__title_type_root {
 	font-size: 40px;
@@ -83,10 +83,11 @@
 }
 .donate__container {
 	background-color: var(--Cyan-300);
-	padding: 68px 104px;
-	width: fit-content;
-	margin: 60px auto;
-	border-radius: 20px;
+    background-size: 100px;
+    padding: 68px 0;
+    width: calc(100% - 14.44%);
+    margin: 60px auto;
+    border-radius: 20px;
 }
 .donate__container_page_root {
 	background-color: var(--Orange-300);
@@ -95,20 +96,20 @@
 	background-color: var(--Gradation-100);
 	border-radius: 10px;
 	max-width: 1010px;
-	width: 100vw;
+	width: 100%;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 391px 386px;
 	grid-template-rows: 111px 29px 65px 92px 54px 64px 85px;
-  gap: 0px 51px;
-  grid-template-areas: 
-    "img switchers"
-    "img title"
-    "img donation-row1"
-    "img donation-row2"
-    "img anonim"
-    "img submit"
-    "img offer";
+	gap: 0px 51px;
+	grid-template-areas:
+			"img switchers"
+			"img title"
+			"img donation-row1"
+			"img donation-row2"
+			"img anonim"
+			"img submit"
+			"img offer";
 }
 .donate__formSwitchers {
 	grid-area: switchers;
@@ -125,22 +126,23 @@
 	color: #242728;
 	background-color: inherit;
 	border: none;
-	padding: 0 0 12px;
+	padding: 0 6px 12px;
 	transition: var(--linear-anim);
 }
 .donate__formSwitcher_type_active {
 	color: var(--Orange-300);
 	font-weight: 500;
-	padding: 0 6px 12px;
 	border-bottom: 1px solid var(--Orange-300);
 }
 .donate__formImage {
 	margin: 40px 0 40px 24px;
 	width: 368px;
 	height: 420px;
-	object-fit: none;
-	object-position: center center;
+	object-fit: cover;
+	object-position: 34% 50%;
+	border-radius: 5px;
 	grid-area: img;
+	transform: rotateY(180deg);
 }
 .donate__formTitle {
 	grid-area: title;
@@ -157,7 +159,7 @@
 	visibility: visible;
 	opacity: 1;
 	display: flex;
-	gap: 10px;
+	gap: 16px;
 }
 .donate__donationContainer:last-of-type {
 	grid-area: donation-row2;
@@ -168,7 +170,7 @@
 	padding: 0;
 	transition: var(--linear-anim);
 	border-radius: 5px;
-	width: 122px;
+	width: 100vw;
 	height: 56px;
 	font-family: 'Sreda';
 	font-weight: 400;
@@ -179,7 +181,7 @@
 	display: table-cell;
 	vertical-align: middle;
 }
-.donate__formRadio:checked ~ .donate__form-donation {
+.donate__formRadio:checked ~ .donate__formDonation {
 	background-color: var(--Cyan-300);
 	color: var(--Gradation-100);
 }
@@ -312,4 +314,78 @@ input::-webkit-inner-spin-button {
 	font-weight: 500;
 	text-decoration: none;
 	border-bottom: 1px solid var(--Gradation-500);
+}
+@media screen and (max-width: 1010px) {
+	.donate__container {
+    padding: 32px 0;
+		max-width: 850px;
+	}
+	.donate__form {
+		grid-template-columns: 0.9fr calc(49% - 16px);
+		gap: 0px 40px;
+	}
+	.donate__formImage {
+		max-width: 368px;
+    width: inherit;
+		margin-left: 16px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.donate__container {
+    width: 100%;
+		padding: 20px 0 20px;
+    border-radius: 10px;
+	}
+	.donate__form {
+		grid-template-columns: 1fr;
+		grid-template-rows: 105px auto 15px 62px 94px 51px 60px 31px;
+		grid-template-areas:
+			"switchers"
+			"img"
+			"title"
+			"donation-row1"
+			"donation-row2"
+			"anonim"
+			"submit"
+			"offer";
+	}
+	.donate__formSwitchers {
+		margin: 30px auto 21px;
+    max-width: calc(100% - 20px);
+    gap: 14px;
+	}
+	.donate__formImage {
+		margin: 0 auto;
+    max-width: none;
+    width: calc(100% - 32px);
+    height: 91%;
+    object-fit: cover;
+	}
+	.donate__formTitle, .donate__formSpan, .donate__formInput, .donate__formOffer {
+		margin: 0 16px;
+	}
+	.donate__formSubmit {
+		width: calc(100% - 32px);
+    margin: 0 auto;
+    max-width: none;
+	}
+	.donate__donationContainer {
+		margin: 8px auto;
+    width: calc(100% - 32px);
+    justify-content: center;
+    max-width: none;
+	}
+	.donate__donationContainer:last-of-type {
+		margin-top: 8px;
+	}
+	.donate__formDonation {
+    height: 56px;
+	}
+	.donate__formLabel:last-of-type {
+		margin: 0 auto;
+    width: calc(100% - 32px);
+	}
+	.donate__formSpan_type_anonim {
+		margin: 0;
+	}
 }
