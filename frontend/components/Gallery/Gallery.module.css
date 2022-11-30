@@ -1,0 +1,32 @@
+.slider_container {
+  width: 100vw;
+}
+
+.gallery_title {
+  font-family: "Sreda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 125%;
+  color: var(--Cyan-300);
+  margin: calc(100vh * 0.11) 0 calc(100vh * 0.053) 0;
+}
+
+@media screen and (min-width: 0) {
+  .gallery_title {
+    margin: 0 0 20px 0;
+  }
+  .slider_container {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 842px) {
+  .gallery_title {
+    margin: calc(100vh * 0.11) 0 calc(100vh * 0.053) 0;
+  }
+
+  .slider_container {
+    margin-bottom: calc(100vh * 0.152);
+  }
+}

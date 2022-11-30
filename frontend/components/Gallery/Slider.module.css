@@ -1,0 +1,79 @@
+.div {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  max-width: 1280px;
+  height: 680px;
+  margin: 0 auto;
+  filter: drop-shadow(15px 20px 25px rgba(0, 0, 0, 0.25));
+  border-radius: 20px;
+}
+
+
+.slide {
+  border-radius: 20px;
+  position: relative;
+  height: 100%;
+  width: 1280px;
+  object-fit: cover;
+}
+
+.slider {
+  margin: 0 16px;
+}
+
+.btn {
+  width: 90px;
+  height: 90px;
+  background: #E75D22;
+  border: 0;
+  border-radius: 100%;
+  cursor: pointer;
+  background-image: url(../../images/arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-50%);
+  transition: .2s;
+}
+
+.btn:hover {
+  opacity: .7;
+}
+
+.btn_left {
+  top: 50%;
+  left: -45px;
+  transform: rotate(180deg);
+}
+
+.btn_right {
+  transform: translateY(0);
+  top: 50%;
+  right: -45px;
+  left: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .div {
+    width: 100%;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  .btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .btn_left {
+    left: 15px;
+  }
+
+  .btn_right {
+    right: 15px;
+  }
+}
