@@ -6,6 +6,7 @@ import Programs from "../components/Programs/Programs";
 import Partners from "../components/Partners/Partners";
 import Questions from "../components/Questions/Questions";
 import ForWhat from "../components/ForWhat/ForWhat";
+import Donation from "../components/Donation/Donation";
 import Gallery from "../components/Gallery/Gallery";
 function Page() {
   return (
@@ -16,6 +17,7 @@ function Page() {
       <Programs />
       <ForWhat />
       {/* <Gallery /> */}
+      <Donation root/>
       <Questions />
       <Footer />
     </div>
