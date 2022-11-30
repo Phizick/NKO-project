@@ -1,9 +1,9 @@
 import staffImg from '../../images/donate_reason_type_staff.png';
 import logisticsImg from '../../images/donate_reason_type_logistics.png';
 import inventoryImg from '../../images/donate_reason_type_inventory.png';
-import styles from '../../components/Donate/Donate.module.css';
+import styles from '../../components/Donation/Donation.module.css';
 
-const DonateReason = () => {
+const DonationReason = () => {
 	return (
 		<div className={styles.donate__reasons}>
 			<h3 className={styles.donate__reasonsTitle}>На что нужны пожертвования</h3>
@@ -33,4 +33,4 @@ const DonateReason = () => {
 			</div>
 	);
 }
-export default DonateReason;
+export default DonationReason;

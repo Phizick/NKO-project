@@ -1,6 +1,6 @@
-import styles from '../../components/Donate/Donate.module.css';
+import styles from '../../components/Donation/Donation.module.css';
 
-const DonateRadioButton = ({ value, className, onChange, donateAmount }) => {
+const DonationRadioButton = ({ value, className, onChange, donateAmount }) => {
 	const handeleRadio = () => {
 		onChange(value)
 	}
@@ -18,4 +18,4 @@ const DonateRadioButton = ({ value, className, onChange, donateAmount }) => {
 		</label>
 	);
 }
-export default DonateRadioButton;
+export default DonationRadioButton;

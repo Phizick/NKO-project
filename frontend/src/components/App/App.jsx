@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import { ErrorPage } from "../../pages/ErrorPage/ErrorPage";
 import { MainPage } from "../../pages/MainPage/MainPage";
-import Donate from "../../pages/Donate/Donate";
+import DonationPage from "../../pages/Donate/DonationPage";
 
 import styleApp from "./App.module.css";
 import {NewsPage} from "../../pages/NewsPage/NewsPage";
@@ -24,7 +24,7 @@ export const App = () => {
           <UseFulPage />
         </Route>
         <Route path="/donation" exact={true}>
-          <Donate />
+          <DonationPage />
         </Route>
         <Route path="*">
           <ErrorPage />

@@ -19,6 +19,7 @@
 	font-size: 40px;
 	line-height: 125%;
 	color: var(--Gradation-700);
+	text-align: center;
 }
 .donate__paragraph {
 	margin: 0;
@@ -320,6 +321,13 @@ input::-webkit-inner-spin-button {
     font-size: 9vw;
     width: min-content;
     margin: 16px auto 26px;;
+	}
+	.donate__title_type_root {
+		font-size: 5vw;
+    width: fit-content;
+	}
+	.donate__paragraph {
+		font-size: 6.67vw;
 	}
 	.donate__reasons {
 		width: 100%;

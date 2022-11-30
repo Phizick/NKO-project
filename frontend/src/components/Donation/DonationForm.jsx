@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import donateFormImg from '../../images/donate__form.jpg';
-import DonateRadioButton from './DonateRadioButton';
-import styles from '../../components/Donate/Donate.module.css';
+import DonationRadioButton from './DonationRadioButton';
+import styles from '../../components/Donation/Donation.module.css';
 
-const DonateForm = () => {
+const DonationForm = () => {
 	const [onceDonation, setOnceDonation] = useState(true);
 	const [anonimus, setAnonimus] = useState(false);
-	const [donateAmount, setDonateAmount] = useState('');
+	const [donateAmount, setDonationAmount] = useState('');
 	const { pathname } = useLocation();
 	const donationMonthlyHandler = () => {
 		setOnceDonation(false);
@@ -16,7 +16,7 @@ const DonateForm = () => {
 		setOnceDonation(true);
 	}
 	const donateHandler = (num) => {
-		setDonateAmount(num);
+		setDonationAmount(num);
 	}
 	const handleAnonimus = () => {
 		setAnonimus(!anonimus);
@@ -44,13 +44,13 @@ const DonateForm = () => {
 				<img src={donateFormImg} className={styles.donate__formImage} alt="счастливые молодой парень и мужчина смотрят друг другу в глаза" />
 				<span className={styles.donate__formTitle}>Выберите сумму пожертвования:</span>
 				<div className={styles.donate__donationContainer}>
-					<DonateRadioButton value={50} onChange={donateHandler} donateAmount={donateAmount} />
-					<DonateRadioButton value={100} onChange={donateHandler} donateAmount={donateAmount} />
-					<DonateRadioButton value={250} onChange={donateHandler} donateAmount={donateAmount} /></div>
+					<DonationRadioButton value={50} onChange={donateHandler} donateAmount={donateAmount} />
+					<DonationRadioButton value={100} onChange={donateHandler} donateAmount={donateAmount} />
+					<DonationRadioButton value={250} onChange={donateHandler} donateAmount={donateAmount} /></div>
 				<div className={styles.donate__donationContainer + (onceDonation ? '' : ' ' + styles.donate__formElement_type_hidden)}>
-					<DonateRadioButton value={500} onChange={donateHandler} donateAmount={donateAmount} />
-					<DonateRadioButton value={1000} onChange={donateHandler} donateAmount={donateAmount} />
-					<DonateRadioButton value={5000} onChange={donateHandler} donateAmount={donateAmount} />
+					<DonationRadioButton value={500} onChange={donateHandler} donateAmount={donateAmount} />
+					<DonationRadioButton value={1000} onChange={donateHandler} donateAmount={donateAmount} />
+					<DonationRadioButton value={5000} onChange={donateHandler} donateAmount={donateAmount} />
 				</div>
 				<label htmlFor="donate" className={styles.donate__formLabel	+ (!onceDonation ? '' : ' ' + styles.donate__formElement_type_hidden)}>
 					<span className={styles.donate__formSpan}>Введите собственную сумму пожертвования:</span>
@@ -67,4 +67,4 @@ const DonateForm = () => {
 		</div>
 	);
 }
-export default DonateForm;
+export default DonationForm;
