@@ -1,8 +1,9 @@
 .programs {
+  max-width: 1232px;
   display: flex;
   flex-direction: column;
-  margin: 0 104px;
-  padding-bottom: 96px;
+  margin: 0 auto;
+  padding: 0 104px 96px;
   position: relative;
 }
 
