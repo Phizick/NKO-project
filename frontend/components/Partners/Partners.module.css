@@ -16,7 +16,8 @@
 }
 
 .list {
-    margin: 16px 0 40px;
+    max-width: 1232px;
+    margin: 16px auto 40px;
     padding: 0;
     list-style: none;
     display: grid;
