@@ -182,6 +182,7 @@
 	color: var(--Cyan-300);
 	display: table-cell;
 	vertical-align: middle;
+	cursor: pointer;
 }
 .donate__formRadio:checked ~ .donate__formDonation {
 	background-color: var(--Cyan-300);
