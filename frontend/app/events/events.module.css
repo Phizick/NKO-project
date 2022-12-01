@@ -1,0 +1,113 @@
+.stepper {
+  margin: 35px 0 0 6%;
+  display: flex;
+}
+
+.arrow {
+  background-image: url("../../images/stepper_arrow_right.svg");
+  width: 24px;
+  height: 24px;
+  margin: 0 23px 0 8px;
+}
+
+.stepper_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--Cyan-300);
+  text-decoration: none;
+}
+
+.text_active {
+  border-bottom: 1px solid black;
+}
+
+.page_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.event_title {
+  font-family: "Sreda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+
+  text-align: center;
+  color: var(--Cyan-300);
+}
+
+@media (max-width: 600px) {
+  .event_title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .event_title {
+    font-size: 32px;
+  }
+
+  .btn {
+    padding: 8px 14px;
+  }
+}
+
+.btn_holder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 23px;
+  gap: 8px;
+  background: var(--Orange-300);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: var(--Gradation-100);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: var(--Orange-200);
+}
+
+.disabled_bg {
+  background: var(--Cyan-300);
+}
+
+.disabled_bg:hover {
+  background: var(--Cyan-200);
+}
+
+.cards_holder {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 400px);
+  gap: 15px;
+}
