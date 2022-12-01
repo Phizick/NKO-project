@@ -302,6 +302,7 @@
 	color: var(--Gradation-100);
 	max-width: 206px;
 	max-height: 48px;
+	cursor: pointer;
 }
 .donate__formOffer {
 	grid-area: offer;
