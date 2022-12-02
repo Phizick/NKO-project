@@ -1,9 +1,8 @@
 import styles from './ForWhat.module.css';
-
 import personal from '../../images/personal.png';
 import brushes from '../../images/brushes.png';
 import box from '../../images/box.png';
-import Image from 'next/image'
+import Image from "next/image";
 
 function ForWhat() {
     return (
