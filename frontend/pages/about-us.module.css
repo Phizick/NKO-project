@@ -1,0 +1,156 @@
+.wrapper {
+  margin: auto;
+  background: var(--Gradation-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Sreda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  margin: 0;
+  padding-top: 27px;
+}
+
+.description {
+  max-width: 1232px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0;
+  padding-top: 35px;
+}
+
+.link {
+  text-decoration: none;
+  width: 206px;
+  height: 100%;
+  padding: 16px;
+  margin-top: 35px;
+  margin-bottom: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Orange-300);
+  border-radius: 5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--Gradation-100);
+}
+
+.document {
+  margin: auto;
+  background: var(--Gradation-200);
+}
+
+.title_document {
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 137px;
+  max-width: 1232px;
+  font-family: 'Sreda';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 125%;
+  color: var(--Cyan-300);
+  text-align: center;
+}
+
+.shell {
+  max-width: 1232px;
+  margin: auto;
+  display: grid;
+  gap: 60px 79px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  padding-bottom: 106px;
+}
+
+@media(max-width: 1439px) {
+  .description {
+    padding: 35px 104px 0;
+  }
+}
+
+@media(max-width: 1320px) {
+  .shell {
+    margin: 0 105px;
+    gap: 40px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .shell {
+    gap: 30px;
+  }
+}
+
+@media(max-width: 1040px) {
+  .shell {
+    gap: 15px;
+  }
+}
+
+@media(max-width: 900px) {
+  .title_document {
+    padding-bottom: 87px;
+  }
+
+  .shell {
+    margin: 0 50px;
+    gap: 40px;
+  }
+}
+
+@media(max-width: 800px) {
+  .title_document {
+    font-size: 28px;
+    line-height: 110%;
+  }
+
+  .shell {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    margin: 0 100px;
+  }
+}
+
+@media(max-width: 660px) {
+  .shell {
+    margin: 0 80px;
+    gap: 20px;
+  }
+}
+
+@media(max-width: 500px) {
+  .description {
+    padding: 35px 16px 0;
+  }
+
+  .shell {
+    margin: 0 50px;    
+    padding-top: 0;
+    padding-bottom: 60px;
+    gap: 15px;
+  }
+}
+
+@media(max-width: 390px) {
+  .shell {
+    margin: 0 50px;
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    align-items: center;
+  }
+}
