@@ -27,7 +27,17 @@ export default function AboutUs() {
       </section>
       <Programs />
       <Gallery />
-      <Document />
+      <section className={style.document}>
+        <h1 className={style.title_document}>Учредительные документы</h1>
+        <div className={style.shell}>
+          <Document />
+          <Document />
+          <Document />
+          <Document />
+          <Document />
+          <Document />
+        </div>
+      </section>
       <Footer />
     </>
   )
