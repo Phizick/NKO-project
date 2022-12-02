@@ -4,9 +4,6 @@ import "./Questions.component.css";
 
 export default function QuestionsComponent() {
   function handleCloseButtonClick({ target }) {
-    console.log(
-      target.closest(".question_panel").querySelector(".question_footer")
-    );
     const footerElement = target
       .closest(".question_panel")
       .querySelector(".question_footer");

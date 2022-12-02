@@ -3,9 +3,16 @@ import "./EventCard.component.css";
 import Image from "next/image";
 import preview from "../../images/event_preview.png";
 
-const EventCard = ({ name, description, start_datetime, is_finished }) => {
+const EventCard = ({
+  name,
+  description,
+  start_datetime,
+  is_finished,
+  setModal,
+  cardInfo,
+}) => {
   return (
-    <div className="card">
+    <div className="card" onClick={() => setModal({ ...cardInfo })}>
       <div className="event-preview">
         <Image src={preview} alt="Image" />
       </div>

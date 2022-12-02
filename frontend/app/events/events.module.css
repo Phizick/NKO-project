@@ -111,3 +111,7 @@
   grid-template-columns: repeat(auto-fit, 400px);
   gap: 15px;
 }
+
+.container {
+  position: relative;
+}
