@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-3t%@@t!cmyfox#mvko)e@-9g9a9etsz+agb%ex=f4q7@z&s2qv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['89.109.48.221', '127.0.0.1', 'localhost']
+
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -138,9 +139,18 @@ LOCALE_PATHS = [Path.joinpath(BASE_DIR, 'locale')]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = Path.joinpath(BASE_DIR, 'static')
+
 STATIC_URL = 'static/'
 
-STATIC_ROOT = Path.joinpath(BASE_DIR, 'static')
+if DEBUG:
+    STATIC_DIR = os.path.join(BASE_DIR, 'static')
+else:
+    STATICFILES_FINDERS = (
+        'django.contrib.staticfiles.finders.FileSystemFinder',
+        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    )
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
