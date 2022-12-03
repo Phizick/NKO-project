@@ -1,4 +1,4 @@
-import QuestionsComponent from "./QuestionsComponent";
+import QuestionsComponent from "./QuestionsComponent.jsx";
 import styles from "./Questions.module.css";
 
 function Questions() {

@@ -1,0 +1,33 @@
+.dropdown {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown a {
+  border-bottom: 1px solid var(--Gradation-300);
+  padding: 12px;
+  background-color: var(--Gradation-200);
+  color: var(--Cyan-300);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.dropdown a:hover {
+  background-color: var(--Gradation-100);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.hide {
+  display: none;
+}
