@@ -1,0 +1,116 @@
+.card {
+  width: 400px;
+  height: 422px;
+  background: rgba(22, 79, 100, 0.78);
+  border-radius: 0px;
+  border-bottom-right-radius: 25px;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.event_preview {
+  width: 400px;
+  height: 157px;
+  object-fit: cover;
+}
+
+.event_preview img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 100vw;
+    height: 422px;
+  }
+
+  .event_preview {
+    width: 100%;
+    height: 157px;
+    overflow: hidden;
+  }
+
+  .event_preview img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .item_left {
+    width: 15px;
+  }
+}
+
+.card_title {
+  font-family: "Sreda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  color: white;
+  text-align: start;
+  margin: 23px 0 0 0px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card_body {
+  margin-top: 28px;
+  text-overflow: ellipsis;
+  text-align: start;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  /* or 21px */
+
+  letter-spacing: -0.03em;
+
+  color: #ffffff;
+}
+
+.footer_cotainer {
+  position: absolute;
+  bottom: 13px;
+}
+
+.item_left {
+  position: absolute;
+  bottom: 13px;
+  left: 20px;
+}
+
+.date_item {
+  margin: 33px 0 0 0px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Sreda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  text-align: start;
+  color: rgba(255, 255, 255, 0.42);
+}

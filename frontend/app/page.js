@@ -16,8 +16,7 @@ function Page() {
       <Partners />
       <Programs />
       <ForWhat />
-      {/* <Gallery /> */}
-      <Donation root/>
+      <Donation root />
       <Questions />
       <Footer />
     </div>
