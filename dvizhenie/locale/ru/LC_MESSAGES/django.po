@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-30 20:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: app_activities/models.py:6 app_activities/models.py:9
+msgid "activity type"
+msgstr "Вид деятельности"
+
+#: app_activities/models.py:10
+msgid "activities types"
+msgstr "Виды деятельностей"
+
+#: app_activities/models.py:18
+msgid "activity name"
+msgstr "Название деятельности"
+
+#: app_activities/models.py:19
+msgid "activity description"
+msgstr "Описание деятельности"
+
+#: app_activities/models.py:24
+msgid "activity"
+msgstr "Деятельность"
+
+#: app_activities/models.py:25
+msgid "activities"
+msgstr "Деятельности"
+
+#: app_events/admin.py:33
+#, python-format
+msgid "%d event was successfully marked as finished."
+msgid_plural "%d events were successfully marked as finished."
+msgstr[0] "%d событие было успешно помечено как завершенное."
+msgstr[1] "%d события были успешно помечены как завершенные."
+
+#: app_events/admin.py:42
+#, python-format
+msgid "%d event was successfully marked as in process."
+msgid_plural "%d events were successfully marked as in process."
+msgstr[0] "%d событие было успешно помечено как 'в процессе'"
+msgstr[1] "%d события были успешно помечены как 'в процессе'"
+
+#: app_events/models.py:7 app_events/models.py:13
+msgid "address"
+msgstr "Адрес"
+
+#: app_events/models.py:14
+msgid "addresses"
+msgstr "Адресы"
+
+#: app_events/models.py:19 app_projects/models.py:7 app_projects/models.py:19
+msgid "name"
+msgstr "Название"
+
+#: app_events/models.py:20 app_news/models.py:8 app_projects/models.py:20
+msgid "description"
+msgstr "Описание"
+
+#: app_events/models.py:21 app_projects/models.py:21
+msgid "start timestamp"
+msgstr "Дата и время начала"
+
+#: app_events/models.py:22 app_projects/models.py:22
+msgid "end timestamp"
+msgstr "Дата и время завершения"
+
+#: app_events/models.py:23
+msgid "Is this event has finished?"
+msgstr "Завершено ли это мероприятие?"
+
+#: app_events/models.py:31
+msgid "event"
+msgstr "Мероприятие"
+
+#: app_events/models.py:32
+msgid "events"
+msgstr "Мероприятия"
+
+#: app_events/models.py:37
+msgid "Start of the project cannot be later than its end."
+msgstr "Проект не может начаться позже, чем он закончится."
+
+#: app_news/models.py:7 app_root/models.py:21
+msgid "title"
+msgstr "Заголовок"
+
+#: app_news/models.py:9
+msgid "Date and time of public news."
+msgstr "Дата и время публикации"
+
+#: app_news/models.py:10
+msgid "Last update"
+msgstr "Последнее обновление"
+
+#: app_news/models.py:11
+msgid "short description"
+msgstr "Короткое описание"
+
+#: app_news/models.py:15 app_news/models.py:16
+msgid "news"
+msgstr "Новости"
+
+#: app_projects/admin.py:39
+#, python-format
+msgid "%d project was successfully marked as finished."
+msgid_plural "%d projects were successfully marked as finished."
+msgstr[0] "%d проект был успешно помечен как завершенный."
+msgstr[1] "%d проекты были успешно помечены как завершенные."
+
+#: app_projects/admin.py:48
+#, python-format
+msgid "%d project was successfully marked as in process."
+msgid_plural "%d projects were successfully marked as in process."
+msgstr[0] "%d проект был успешно помечен как 'в процессе'"
+msgstr[1] "%d проекты были успешно помечены как 'в процессе'"
+
+#: app_projects/models.py:10
+msgid "partner"
+msgstr "Партнер"
+
+#: app_projects/models.py:11
+msgid "partners"
+msgstr "Партнеры"
+
+#: app_projects/models.py:23
+msgid "Is this project has finished?"
+msgstr "Закончен ли этот проект?"
+
+#: app_projects/models.py:28
+msgid "project"
+msgstr "Проект"
+
+#: app_projects/models.py:29
+msgid "projects"
+msgstr "Проекты"
+
+#: app_projects/models.py:37
+msgid "Start of the project cannot be later than its end"
+msgstr "Проект не может начаться позже, чем он закончится"
+
+#: app_root/admin.py:21
+#, python-format
+msgid "%d file was successfully marked as corporative."
+msgid_plural "%d files were successfully marked as corporative."
+msgstr[0] "%d файл был успешно помечен как документ фонда"
+msgstr[1] "%d файлы были успешно помечены как документы фонда"
+
+#: app_root/admin.py:30
+#, python-format
+msgid "%d file was successfully marked as not corporative."
+msgid_plural "%d files were successfully marked as not corporative."
+msgstr[0] "%d файл был успешно помечен как НЕ документ фонда"
+msgstr[1] "%d файлы были успешно помечены как НЕ документы фонда"
+
+#: app_root/models.py:7 app_root/models.py:16
+msgid "file"
+msgstr "Файл"
+
+#: app_root/models.py:9
+msgid "is fond doc"
+msgstr "Документ фонда"
+
+#: app_root/models.py:9
+msgid "is file corporate or not"
+msgstr "Является ли файл корпоративным документом или нет"
+
+#: app_root/models.py:10
+msgid "capture"
+msgstr "Подпись"
+
+#: app_root/models.py:17
+msgid "files"
+msgstr "Файлы"
+
+#: app_root/models.py:25 app_root/models.py:26
+msgid "About the fund"
+msgstr "О фонде"
+
+#: app_root/models.py:33
+msgid "vk url"
+msgstr "Ссылка на vk"
+
+#: app_root/models.py:34
+msgid "instagram url"
+msgstr "Ссылка на инстаграм"
+
+#: app_root/models.py:35
+msgid "phone number"
+msgstr "Номер телефона"
+
+#: app_root/models.py:36
+msgid "The fund owner"
+msgstr "Владелец фонда"
+
+#: app_root/models.py:40
+msgid "contact"
+msgstr "Контакт"
+
+#: app_root/models.py:41
+msgid "contacts"
+msgstr "Контакты"
+
+#: app_root/models.py:48 app_root/models.py:54
+msgid "question"
+msgstr "Вопрос"
+
+#: app_root/models.py:55
+msgid "questions"
+msgstr "Вопросы"
+
+#: app_root/models.py:59 app_root/models.py:66
+msgid "answer"
+msgstr "Ответ"
+
+#: app_root/models.py:67
+msgid "answers"
+msgstr "Ответы"
