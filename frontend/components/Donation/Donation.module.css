@@ -4,7 +4,6 @@
 	min-width: 360px;
 	font-family: 'Inter', sans-serif;
 	font-style: normal;
-	--linear-anim: all .2s linear;
 }
 .donate__title {
 	font-family: 'Sreda', serif;
@@ -88,16 +87,18 @@
     background-size: 100px;
     padding: 68px 0;
     width: calc(100% - 14.44%);
-    margin: 60px auto;
+		margin: 60px auto;
     border-radius: 20px;
 }
 .donate__container_page_root {
 	background-color: var(--Orange-300);
+	margin: 96px auto;
 }
 .donate__form {
 	background-color: var(--Gradation-100);
 	border-radius: 10px;
 	max-width: 1010px;
+	min-width: 310px;
 	width: 100%;
 	margin: 0 auto;
 	display: grid;
@@ -125,11 +126,10 @@
 	font-size: 14px;
 	line-height: 150%;
 	text-align: center;
-	color: #242728;
+	color: var(--Gradation-600);
 	background-color: inherit;
 	border: none;
 	padding: 0 6px 12px;
-	transition: var(--linear-anim);
 }
 .donate__formSwitcher_type_active {
 	color: var(--Orange-300);
@@ -157,7 +157,7 @@
 }
 .donate__donationContainer {
 	grid-area: donation-row1;
-	transition: var(--linear-anim);
+	transition: all 0.2s linear;
 	visibility: visible;
 	opacity: 1;
 	display: flex;
@@ -170,7 +170,7 @@
 	background-color: var(--Cyan-100);
 	border: none;
 	padding: 0;
-	transition: var(--linear-anim);
+	transition: all 0.2s linear;
 	border-radius: 5px;
 	width: 100vw;
 	height: 56px;
@@ -193,7 +193,7 @@
 	flex-direction: column;
 	text-align: left;
 	grid-area: donation-row2;
-	transition: var(--linear-anim);
+	transition: all 0.2s linear;
 }
 .donate__formLabel:last-of-type {
 	justify-content: space-between;
@@ -217,12 +217,17 @@
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 150%;
-	border: none;
+	border: 1px solid var(--Gradation-200);
 	outline: none;
+	border-radius: 5px;
 	background-color: var(--Gradation-200);
 	color: var(--Gradation-500);
 	padding: 14px;
 	margin: 9px 0;
+	transition: all .2s linear;
+}
+.donate__formInput:focus {
+	border-color: #E72233;
 }
 .donate__formInput::-webkit-outer-spin-button,
 .donate__formInput::-webkit-inner-spin-button {
@@ -262,7 +267,7 @@
 	background-color: var(--Gradation-200);
 	border: 1px solid var(--Gradation-300);
 	border-radius: 5px;
-	transition: var(--linear-anim);
+	transition: all 0.2s linear;
 }
 .donate__formCheckbox::after {
 	position: absolute;
@@ -273,7 +278,7 @@
 	right: 15px;
 	border-radius: 2.5px;
 	background-color: var(--Gradation-400);
-	transition: var(--linear-anim);
+	transition: all 0.2s linear;
 }
 .donate__formCheckbox:checked::before {
 	background-color: var(--Orange-300);
@@ -288,9 +293,8 @@
 	visibility: hidden;
 	opacity: 0;
 }
-.donate__formSubmit {
-	grid-area: submit;
-	margin: 0;
+.donate__button {
+	margin: 40px auto 0;
 	padding: 0;
 	background-color: var(--Orange-300);
 	border-radius: 5px;
@@ -302,8 +306,14 @@
 	vertical-align: middle;
 	color: var(--Gradation-100);
 	max-width: 206px;
+	width: 100%;
 	max-height: 48px;
+	height: 100vh;
 	cursor: pointer;
+}
+.donate__formSubmit {
+	grid-area: submit;
+	margin: 0;
 }
 .donate__formOffer {
 	grid-area: offer;
@@ -318,6 +328,31 @@
 	font-weight: 500;
 	text-decoration: none;
 	border-bottom: 1px solid var(--Gradation-500);
+}
+.donate__formSwitcher, .donate__button, .donate__formDonation {
+	transition: all 0.2s linear;
+}
+.donate__formSwitcher:hover, .donate__button:hover, .donate__formDonation:hover, .donate__formCheckbox {
+	cursor: pointer;
+}
+.donate__formDonation:hover {
+	background-color: var(--Cyan-200);
+}
+.donate__formRadio:checked ~ .donate__formDonation:hover {
+	color: var(--Gradation-300);
+	background-color: var(--Gradation-500);
+}
+.donate__formSwitcher:hover {
+	color: var(--Gradation-400);
+	cursor: pointer;
+}
+.donate__formSwitcher_type_active:hover {
+	color: var(--Orange-200);
+	border-bottom-color: var(--Orange-200);
+}
+.donate__button:hover {
+	background-color: var(--Orange-200);
+	border-color: var(--Highlight-Light);
 }
 @media screen and (max-width: 1010px) {
 	.donate__title {
@@ -373,6 +408,15 @@
 	}
 }
 @media screen and (max-width: 768px) {
+	.donate__reasons {		
+    padding-top: 31px;
+    margin-bottom: 14px;
+
+	}
+	.donate__reason {
+		gap: 20px;
+    padding: 16px 0 16px 8px
+	}
 	.donate__container {
     width: 100%;
 		padding: 20px 0 20px;
@@ -416,6 +460,7 @@
     width: calc(100% - 32px);
     justify-content: center;
     max-width: none;
+    height: fit-content;
 	}
 	.donate__donationContainer:last-of-type {
 		margin-top: 8px;

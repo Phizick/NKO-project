@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import donateFormImg from '../../images/donate__form.jpg';
 import DonationRadioButton from './DonationRadioButton';
+import DonationButton from './DonationButton';
 import styles from './Donation.module.css';
 
 const DonationForm = ({ root }) => {
@@ -61,7 +62,7 @@ const DonationForm = ({ root }) => {
 					<span className={styles.donate__formSpan + ' ' + styles.donate__formSpan_type_anonim}>Анонимное пожертвование</span>
 					<input type="checkbox" name="anonim" id="anonim" className={styles.donate__formCheckbox} onChange={handleAnonimus} checked={anonimus}/>
 				</label>
-				<button type="submit" className={styles.donate__formSubmit}>Сделать пожертвование</button>
+				<DonationButton type="submit" className={styles.donate__formSubmit} text="Сделать пожертвование" />
 				<span className={styles.donate__formOffer}>Продолжая вы соглашаетесь с <a href="/#" className={styles.donate__formLink}>офертой</a></span>
 			</form>
 		</div>
