@@ -37,7 +37,6 @@
 }
 .donate__reasonsTitle {
 	margin: 42px auto 0;
-	border-radius: 5px;
 	font-family: 'Sreda';
 	font-style: normal;
 	font-weight: 400;
@@ -127,7 +126,7 @@
 	font-size: 14px;
 	line-height: 150%;
 	text-align: center;
-	color: #242728;
+	color: var(--Gradation-600);
 	background-color: inherit;
 	border: none;
 	padding: 0 6px 12px;
@@ -218,12 +217,17 @@
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 150%;
-	border: none;
+	border: 1px solid var(--Gradation-200);
 	outline: none;
+	border-radius: 5px;
 	background-color: var(--Gradation-200);
 	color: var(--Gradation-500);
 	padding: 14px;
 	margin: 9px 0;
+	transition: all .2s linear;
+}
+.donate__formInput:focus {
+	border-color: #E72233;
 }
 .donate__formInput::-webkit-outer-spin-button,
 .donate__formInput::-webkit-inner-spin-button {
@@ -325,14 +329,30 @@
 	text-decoration: none;
 	border-bottom: 1px solid var(--Gradation-500);
 }
-.donate__formSwitcher, .donate__formRadio, .donate__button, .donate__formDonation {
+.donate__formSwitcher, .donate__button, .donate__formDonation {
 	transition: all 0.2s linear;
 }
-.donate__formSwitcher:hover, .donate__formRadio:hover, .donate__button:hover, .donate__formDonation:hover {
-	opacity: .8;
+.donate__formSwitcher:hover, .donate__button:hover, .donate__formDonation:hover, .donate__formCheckbox {
+	cursor: pointer;
 }
 .donate__formDonation:hover {
-
+	background-color: var(--Cyan-200);
+}
+.donate__formRadio:checked ~ .donate__formDonation:hover {
+	color: var(--Gradation-300);
+	background-color: var(--Gradation-500);
+}
+.donate__formSwitcher:hover {
+	color: var(--Gradation-400);
+	cursor: pointer;
+}
+.donate__formSwitcher_type_active:hover {
+	color: var(--Orange-200);
+	border-bottom-color: var(--Orange-200);
+}
+.donate__button:hover {
+	background-color: var(--Orange-200);
+	border-color: var(--Highlight-Light);
 }
 @media screen and (max-width: 1010px) {
 	.donate__title {
