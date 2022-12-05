@@ -55,7 +55,7 @@
 }
 .donate__reason {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 22px;
 	margin: 16px 0 0;
 	padding: 25px 17px 25px 24px;
@@ -415,7 +415,6 @@
 	}
 	.donate__reason {
 		gap: 20px;
-    padding: 16px 0 16px 8px
 	}
 	.donate__container {
     width: 100%;
