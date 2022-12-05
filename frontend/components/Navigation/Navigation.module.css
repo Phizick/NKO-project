@@ -35,9 +35,15 @@
 	.nav__link {
 		margin-left: 60px;
 	}
+	.nav__link_type_current {
+		margin: 0;
+	}
 }
 @media screen and (max-width:768px) {
 	.nav__link {
 		margin-left: 16px; 
+	}
+	.nav__link_type_current {
+		margin: 0;
 	}
 }
