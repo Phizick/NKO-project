@@ -4,6 +4,7 @@ from dvizhenie.core.loading import get_model
 from rest_framework import permissions
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter
+from .filters import EventsFilter
 
 
 __all__ = ['EventViewSet', 'AddressViewSet']
@@ -21,7 +22,7 @@ class EventViewSet(viewsets.ModelViewSet):
     serializer_class = EventSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     filter_backends = [DjangoFilterBackend, OrderingFilter]
-    filterset_fields = ['is_finished']
+    filterset_class = EventsFilter
     ordering_fields = ['start_timestamp', 'end_timestamp']
 
 

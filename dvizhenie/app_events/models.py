@@ -20,9 +20,18 @@ class FundEvent(models.Model):
     description = models.TextField(_("description"), max_length=2048, blank=True)
     start_timestamp = models.DateTimeField(_("start timestamp"))
     end_timestamp = models.DateTimeField(_("end timestamp"))
-    is_finished = models.BooleanField(_("is finished"), db_index=True, help_text=_("Is this event has finished?"), default=False)
-    addresses = models.ManyToManyField(Address, verbose_name=_("addresses"), related_name="events")
-    files = models.ManyToManyField('root.File', verbose_name=_("files"), related_name="events")
+
+    is_finished = models.BooleanField(
+        _("is finished"), db_index=True, help_text=_("Is this event has finished?"), default=False
+    )
+
+    addresses = models.ManyToManyField(Address, verbose_name=_("addresses"), related_name="events", blank=True)
+
+    is_online = models.BooleanField(
+        _("online mode?"), db_index=True, help_text=_("Is this event will conduct in online mode?")
+    )
+
+    files = models.ManyToManyField('root.File', verbose_name=_("files"), related_name="events", blank=True)
 
     def __str__(self):
         return self.name

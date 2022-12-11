@@ -2,12 +2,9 @@ from django.contrib import admin, messages
 from django.utils.translation import ngettext
 from dvizhenie.core.loading import get_model
 
-
 File = get_model('root', 'File')
 AboutNKO = get_model('root', 'AboutTheFund')
 MediaLinks = get_model('root', 'Contacts')
-Question = get_model('root', 'Question')
-Answer = get_model('root', 'Answer')
 
 
 class FileAdmin(admin.ModelAdmin):
@@ -41,21 +38,6 @@ class MediaLinksAdmin(admin.ModelAdmin):
     list_display = ['id', 'vk_url', 'inst_url', 'owner', 'phone', 'address']
 
 
-class AnswerInline(admin.TabularInline):
-    model = Answer
-
-
-class AnswerAdmin(admin.ModelAdmin):
-    list_display = ['id', 'answer', 'question']
-
-
-class QuestionAdmin(admin.ModelAdmin):
-    list_display = ['id', 'question',]
-    inlines = [AnswerInline]
-
-
 admin.site.register(File, FileAdmin)
 admin.site.register(AboutNKO, AboutNKOAdmin)
 admin.site.register(MediaLinks, MediaLinksAdmin)
-admin.site.register(Question, QuestionAdmin)
-admin.site.register(Answer, AnswerAdmin)

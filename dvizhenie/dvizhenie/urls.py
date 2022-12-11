@@ -23,6 +23,7 @@ from app_activities.views import *
 from app_news.views import *
 from app_projects.views import *
 from app_root.views import *
+from app_questions.views import *
 
 from rest_framework.routers import DefaultRouter
 from rest_framework import permissions
@@ -61,6 +62,7 @@ router.register(r'partners', PartnerViewSet)
 router.register(r'files', FileViewSet)
 router.register(r'about', AboutTheFundViewSet)
 router.register(r'contacts', ContactsViewSet)
+
 router.register(r'questions', QuestionViewSet)
 router.register(r'answers', AnswerViewSet)
 

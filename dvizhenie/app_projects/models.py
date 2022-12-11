@@ -21,8 +21,8 @@ class Project(models.Model):
     start_timestamp = models.DateTimeField(_("start timestamp"))
     end_timestamp = models.DateTimeField(_("end timestamp"))
     is_finished = models.BooleanField(_("is finished"), db_index=True, help_text=_("Is this project has finished?"))
-    partners = models.ManyToManyField(Partner, verbose_name=_("partners"), related_name="projects")
-    files = models.ManyToManyField('root.File', verbose_name=_("files"), related_name="projects")
+    partners = models.ManyToManyField(Partner, verbose_name=_("partners"), related_name="projects", blank=True)
+    files = models.ManyToManyField('root.File', verbose_name=_("files"), related_name="projects", blank=True)
 
     class Meta:
         verbose_name = _("project")

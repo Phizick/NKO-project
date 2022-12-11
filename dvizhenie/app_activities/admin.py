@@ -13,6 +13,7 @@ class ActivityInline(admin.TabularInline):
 class ActivityAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'description', 'activity_type']
     ordering = ('activity_type',)
+    filter_horizontal = ('files',)
 
 
 class ActivityTypeAdmin(admin.ModelAdmin):

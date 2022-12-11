@@ -5,10 +5,10 @@ from django.utils.translation import gettext_lazy as _
 class News(models.Model):
     title = models.CharField(_("title"), max_length=128, db_index=True)
     description = models.TextField(_("description"), max_length=2048, blank=True)
-    created_at = models.DateTimeField(_("Date and time of public news."), auto_now_add=True)
-    updated_at = models.DateTimeField(_("Last update"), auto_now=True)
+    created_at = models.DateField(_("Date and time of public news."), auto_now_add=True)
+    updated_at = models.DateField(_("Last update"), auto_now=True)
     short_description = models.TextField(_("short description"), max_length=512, blank=True)
-    files = models.ManyToManyField('root.File', verbose_name=_("files"), related_name="news")
+    files = models.ManyToManyField('root.File', verbose_name=_("files"), related_name="news", blank=True)
 
     class Meta:
         verbose_name = _("news")

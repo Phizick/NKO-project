@@ -9,8 +9,6 @@ from rest_framework.filters import OrderingFilter
 AboutTheFund = get_model('root', 'AboutTheFund')
 Contacts = get_model('root', 'Contacts')
 File = get_model('root', 'File')
-Question = get_model('root', 'Question')
-Answer = get_model('root', 'Answer')
 
 
 class FileViewSet(viewsets.ModelViewSet):
@@ -34,13 +32,3 @@ class AboutTheFundViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
-class QuestionViewSet(viewsets.ModelViewSet):
-    queryset = Question.objects.all()
-    serializer_class = QuestionSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-
-
-class AnswerViewSet(viewsets.ModelViewSet):
-    queryset = Answer.objects.all().select_related('question')
-    serializer_class = AnswerSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]

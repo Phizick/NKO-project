@@ -20,11 +20,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3t%@@t!cmyfox#mvko)e@-9g9a9etsz+agb%ex=f4q7@z&s2qv'
 
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'uh+q3v_+##(f-@4wj)us-$#vn0rap!v!52i**8v_7w-c6x5t2=')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
+DEBUG = True
+
+# SECURE_HSTS_SECONDS = 518400
+#
+# SECURE_SSL_REDIRECT = True
+#
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+#
+# CSRF_COOKIE_SECURE = True
+#
+# SESSION_COOKIE_SECURE = True
+#
+# SECURE_HSTS_PRELOAD = True
 
 ALLOWED_HOSTS = []
 
@@ -42,13 +54,16 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'django_filters',
-    'debug_toolbar',
     'app_activities.apps.AppActivitiesConfig',
     'app_events.apps.AppEventsConfig',
     'app_news.apps.AppNewsConfig',
     'app_projects.apps.AppProjectsConfig',
     'app_root.apps.AppRootConfig',
+    'app_questions.apps.AppQuestionsConfig',
 ]
+
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -88,11 +103,11 @@ WSGI_APPLICATION = 'dvizhenie.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('PGNAME'),  # NKO-DVIZHENIE
-        'HOST': os.getenv('PGHOST'),  # comp name
-        'PASSWORD': os.getenv('PGPASS'),  # 1234
-        'PORT': os.getenv('PGPORT', '5432'),  # 5432
-        'USER': os.getenv('PGUSER'),  # NKO-DVIZHENIE
+        'NAME': os.getenv('PGNAME'),
+        'HOST': os.getenv('PGHOST'),
+        'PASSWORD': os.getenv('PGPASS'),
+        'PORT': os.getenv('PGPORT', '5432'),
+        'USER': os.getenv('PGUSER'),
     }
 }
 
@@ -142,6 +157,7 @@ LOCALE_PATHS = [Path.joinpath(BASE_DIR, 'locale')]
 STATIC_ROOT = Path.joinpath(BASE_DIR, 'static')
 
 STATIC_URL = 'static/'
+
 
 if DEBUG:
     STATIC_DIR = os.path.join(BASE_DIR, 'static')
