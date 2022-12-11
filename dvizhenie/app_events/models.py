@@ -4,6 +4,9 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Address(models.Model):
+    """
+    Адрес (чего угодно).
+    """
     address = models.CharField(_("address"), max_length=256)
 
     def __str__(self):
@@ -16,6 +19,9 @@ class Address(models.Model):
 
 
 class FundEvent(models.Model):
+    """
+    Мероприятие фонда. Если мероприятие прошло поставьте флажок в поле 'Закончено?'.
+    """
     name = models.CharField(_("name"), max_length=128, db_index=True)
     description = models.TextField(_("description"), max_length=2048, blank=True)
     start_timestamp = models.DateTimeField(_("start timestamp"))

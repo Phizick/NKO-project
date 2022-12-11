@@ -3,6 +3,11 @@ from django.utils.translation import gettext_lazy as _
 
 
 class File(models.Model):
+    """
+    Все файлы, которые подгружаются на сайте.
+    Будьте внимательны при удалении файлов, случайно можно удалить какой-либо использующийся файл.
+    Если файл корпоративный - поставить флажок 'Документ фонда'.
+    """
     file_field = models.FileField(
         _('file'), blank=True, upload_to='files_storage/'
     )
@@ -30,6 +35,9 @@ class AboutTheFund(models.Model):
 
 
 class Contacts(models.Model):
+    """
+    Контакты
+    """
     vk_url = models.URLField(_("vk url"), max_length=200, blank=True)
     inst_url = models.URLField(_("instagram url"), max_length=200, blank=True)
     phone = models.CharField(_("phone number"), max_length=11, blank=True)

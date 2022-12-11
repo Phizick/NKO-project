@@ -3,6 +3,9 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Question(models.Model):
+    """
+    Наиболее часто встречающиеся вопросы. Отображаются на главной странице фонда внизу.
+    """
     question = models.CharField(_("question"), max_length=256)
 
     def __str__(self):
@@ -14,6 +17,9 @@ class Question(models.Model):
 
 
 class Answer(models.Model):
+    """
+    Ответы на вопросы.
+    """
     answer = models.TextField(_("answer"))
     question = models.ForeignKey(Question, verbose_name=_("question"), on_delete=models.CASCADE, related_name='answer')
 

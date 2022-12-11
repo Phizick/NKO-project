@@ -13,4 +13,4 @@ class EventsFilter(FilterSet):
 
     class Meta:
         model = FundEvent
-        fields = ['month', 'year']
+        fields = ['month', 'year', 'is_finished', 'is_online']
