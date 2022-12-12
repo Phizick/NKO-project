@@ -14,8 +14,16 @@ import Dropdown from "../../components/Sort/Dropdown";
 import { monthsToFilter } from "./monthsList";
 import { cardsInfo } from "./MockData.cards";
 import NewsModal from "../../components/NewsModal/NewsModal";
+import useSWR from 'swr'
+const fetcher = (...args) => fetch(...args).then(res => res.json())
+
 
 export default function News() {
+  const {data,error} = useSWR('https://api.atlas.msk.ru/api/v1/projects/',fetcher)
+  useEffect(() => {
+    console.log(data)
+  })
+
   const classNames = require("classnames");
   const [hide, setHide] = useState({
     year: true,
