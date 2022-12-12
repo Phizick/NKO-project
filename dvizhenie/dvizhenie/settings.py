@@ -188,3 +188,11 @@ REST_FRAMEWORK = {
 INTERNAL_IPS = [
     '127.0.0.1'
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000"
+]
+
+CORS_EXPOSE_HEADERS = ['Content-Type', 'X-CSRFToken']
+
+CORS_ALLOW_CREDENTIALS = True
