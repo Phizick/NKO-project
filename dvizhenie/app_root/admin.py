@@ -35,7 +35,7 @@ class AboutNKOAdmin(admin.ModelAdmin):
 
 
 class MediaLinksAdmin(admin.ModelAdmin):
-    list_display = ['id', 'vk_url', 'inst_url', 'owner', 'phone', 'address']
+    list_display = ['id', 'vk_url', 'ok_url', 'owner', 'phone', 'address']
 
 
 admin.site.register(File, FileAdmin)

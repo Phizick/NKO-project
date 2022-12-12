@@ -24,21 +24,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'uh+q3v_+##(f-@4wj)us-$#vn0rap!v!52i**8v_7w-c6x5t2=')
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 
-# SECURE_HSTS_SECONDS = 518400
-#
-# SECURE_SSL_REDIRECT = True
-#
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-#
-# CSRF_COOKIE_SECURE = True
-#
-# SESSION_COOKIE_SECURE = True
-#
-# SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_SECONDS = 518400
 
-ALLOWED_HOSTS = []
+SECURE_SSL_REDIRECT = True
+
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+CSRF_COOKIE_SECURE = True
+
+SESSION_COOKIE_SECURE = True
+
+SECURE_HSTS_PRELOAD = True
+
+ALLOWED_HOSTS = ['api.atlas.msk.ru', '127.0.0.1', 'localhost']
 
 
 # Application definition

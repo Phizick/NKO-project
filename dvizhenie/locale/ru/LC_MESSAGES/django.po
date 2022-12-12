@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-11 16:27+0000\n"
+"POT-Creation-Date: 2022-12-12 20:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,33 +20,33 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: app_activities/apps.py:9 app_activities/models.py:27
+#: app_activities/apps.py:9 app_activities/models.py:33
 msgid "activities"
 msgstr "Деятельности"
 
-#: app_activities/models.py:6 app_activities/models.py:9
-#: app_activities/models.py:21
+#: app_activities/models.py:9 app_activities/models.py:12
+#: app_activities/models.py:27
 msgid "activity type"
 msgstr "Вид деятельности"
 
-#: app_activities/models.py:10
+#: app_activities/models.py:13
 msgid "activities types"
 msgstr "Виды деятельностей"
 
-#: app_activities/models.py:18
+#: app_activities/models.py:24
 msgid "activity name"
 msgstr "Название деятельности"
 
-#: app_activities/models.py:19
+#: app_activities/models.py:25
 msgid "activity description"
 msgstr "Описание деятельности"
 
-#: app_activities/models.py:23 app_events/models.py:34 app_news/models.py:11
-#: app_projects/models.py:25 app_root/models.py:17
+#: app_activities/models.py:29 app_events/models.py:40 app_news/models.py:15
+#: app_projects/models.py:44 app_root/models.py:22
 msgid "files"
 msgstr "Файлы"
 
-#: app_activities/models.py:26
+#: app_activities/models.py:32
 msgid "activity"
 msgstr "Деятельность"
 
@@ -82,75 +82,75 @@ msgid_plural "%d events were successfully switched in offline mode."
 msgstr[0] "%d Изменён режим: [онлайн]"
 msgstr[1] "%d Изменён режим: [оффлайн]"
 
-#: app_events/apps.py:9 app_events/models.py:41
+#: app_events/apps.py:9 app_events/models.py:47
 msgid "events"
 msgstr "Мероприятия"
 
-#: app_events/models.py:7 app_events/models.py:13 app_root/models.py:37
+#: app_events/models.py:10 app_events/models.py:16 app_root/models.py:46
 msgid "address"
 msgstr "Адрес"
 
-#: app_events/models.py:14 app_events/models.py:28
+#: app_events/models.py:17 app_events/models.py:34
 msgid "addresses"
 msgstr "Адресы"
 
-#: app_events/models.py:19 app_projects/models.py:7 app_projects/models.py:19
+#: app_events/models.py:25 app_projects/models.py:10 app_projects/models.py:30
 msgid "name"
 msgstr "Название"
 
-#: app_events/models.py:20 app_news/models.py:7 app_projects/models.py:20
+#: app_events/models.py:26 app_news/models.py:11 app_projects/models.py:31
 msgid "description"
 msgstr "Описание"
 
-#: app_events/models.py:21 app_projects/models.py:21
+#: app_events/models.py:27 app_projects/models.py:32
 msgid "start timestamp"
 msgstr "Дата и время начала"
 
-#: app_events/models.py:22 app_projects/models.py:22
+#: app_events/models.py:28 app_projects/models.py:33
 msgid "end timestamp"
 msgstr "Дата и время завершения"
 
-#: app_events/models.py:25 app_projects/models.py:23
+#: app_events/models.py:31 app_projects/models.py:36
 msgid "is finished"
 msgstr "Закончено?"
 
-#: app_events/models.py:25
+#: app_events/models.py:31
 msgid "Is this event has finished?"
 msgstr "Завершено ли это мероприятие?"
 
-#: app_events/models.py:31
+#: app_events/models.py:37
 msgid "online mode?"
 msgstr "В онлайне?"
 
-#: app_events/models.py:31
+#: app_events/models.py:37
 msgid "Is this event will conduct in online mode?"
 msgstr "Будет ли это мерпориятие проводится в онлайн режиме?"
 
-#: app_events/models.py:40
+#: app_events/models.py:46
 msgid "event"
 msgstr "Мероприятие"
 
-#: app_events/models.py:46
+#: app_events/models.py:52
 msgid "Start of the project cannot be later than its end."
 msgstr "Проект не может начаться позже, чем он закончится."
 
-#: app_news/apps.py:9 app_news/models.py:14 app_news/models.py:15
+#: app_news/apps.py:9 app_news/models.py:18 app_news/models.py:19
 msgid "news"
 msgstr "Новости"
 
-#: app_news/models.py:6 app_root/models.py:21
+#: app_news/models.py:10 app_root/models.py:26
 msgid "title"
 msgstr "Заголовок"
 
-#: app_news/models.py:8
+#: app_news/models.py:12
 msgid "Date and time of public news."
 msgstr "Дата и время публикации"
 
-#: app_news/models.py:9
+#: app_news/models.py:13
 msgid "Last update"
 msgstr "Последнее обновление"
 
-#: app_news/models.py:10
+#: app_news/models.py:14
 msgid "short description"
 msgstr "Короткое описание"
 
@@ -168,44 +168,48 @@ msgid_plural "%d projects were successfully marked as in process."
 msgstr[0] "%d проект был успешно помечен как 'в процессе'"
 msgstr[1] "%d проекты были успешно помечены как 'в процессе'"
 
-#: app_projects/apps.py:9 app_projects/models.py:29
+#: app_projects/apps.py:9 app_projects/models.py:49
 msgid "projects"
 msgstr "Проекты"
 
-#: app_projects/models.py:10
+#: app_projects/models.py:12
+msgid "logo"
+msgstr "Логотип партнёра/опознавательная картинка"
+
+#: app_projects/models.py:16
 msgid "partner"
 msgstr "Партнер"
 
-#: app_projects/models.py:11 app_projects/models.py:24
+#: app_projects/models.py:17 app_projects/models.py:40
 msgid "partners"
 msgstr "Партнеры"
 
-#: app_projects/models.py:23
+#: app_projects/models.py:36
 msgid "Is this project has finished?"
 msgstr "Закончен ли этот проект?"
 
-#: app_projects/models.py:28
+#: app_projects/models.py:48
 msgid "project"
 msgstr "Проект"
 
-#: app_projects/models.py:37
+#: app_projects/models.py:57
 msgid "Start of the project cannot be later than its end"
 msgstr "Проект не может начаться позже, чем он закончится"
 
-#: app_questions/apps.py:9 app_questions/models.py:13
+#: app_questions/apps.py:9 app_questions/models.py:16
 msgid "questions"
 msgstr "Вопросы"
 
-#: app_questions/models.py:6 app_questions/models.py:12
-#: app_questions/models.py:18
+#: app_questions/models.py:9 app_questions/models.py:15
+#: app_questions/models.py:24
 msgid "question"
 msgstr "Вопрос"
 
-#: app_questions/models.py:17 app_questions/models.py:24
+#: app_questions/models.py:23 app_questions/models.py:30
 msgid "answer"
 msgstr "Ответ"
 
-#: app_questions/models.py:25
+#: app_questions/models.py:31
 msgid "answers"
 msgstr "Ответы"
 
@@ -227,46 +231,53 @@ msgstr[1] "%d файлы были успешно помечены как НЕ д
 msgid "general"
 msgstr "Общее"
 
-#: app_root/models.py:7 app_root/models.py:16
+#: app_root/models.py:12 app_root/models.py:21
 msgid "file"
 msgstr "Файл"
 
-#: app_root/models.py:9
+#: app_root/models.py:14
 msgid "is fond doc"
 msgstr "Документ фонда"
 
-#: app_root/models.py:9
+#: app_root/models.py:14
 msgid "is file corporate or not"
 msgstr "Является ли файл корпоративным документом или нет"
 
-#: app_root/models.py:10
+#: app_root/models.py:15
 msgid "capture"
 msgstr "Подпись"
 
-#: app_root/models.py:25 app_root/models.py:26
+#: app_root/models.py:30 app_root/models.py:31
 msgid "About the fund"
 msgstr "О фонде"
 
-#: app_root/models.py:33
+#: app_root/models.py:41
 msgid "vk url"
-msgstr "Ссылка на vk"
+msgstr "ВК"
 
-#: app_root/models.py:34
-msgid "instagram url"
-msgstr "Ссылка на инстаграм"
+#: app_root/models.py:42
+msgid "odnoklassniki url"
+msgstr "Одноклассники"
 
-#: app_root/models.py:35
+#: app_root/models.py:43
 msgid "phone number"
 msgstr "Номер телефона"
 
-#: app_root/models.py:36
+#: app_root/models.py:44
 msgid "The fund owner"
 msgstr "Владелец фонда"
 
-#: app_root/models.py:40
+#: app_root/models.py:48
+msgid "telegram"
+msgstr "Телеграм"
+
+#: app_root/models.py:51
 msgid "contact"
 msgstr "Контакт"
 
-#: app_root/models.py:41
+#: app_root/models.py:52
 msgid "contacts"
 msgstr "Контакты"
+
+#~ msgid "instagram url"
+#~ msgstr "Ссылка на инстаграм"

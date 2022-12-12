@@ -39,10 +39,13 @@ class Contacts(models.Model):
     Контакты
     """
     vk_url = models.URLField(_("vk url"), max_length=200, blank=True)
-    inst_url = models.URLField(_("instagram url"), max_length=200, blank=True)
-    phone = models.CharField(_("phone number"), max_length=11, blank=True)
+    ok_url = models.URLField(_("odnoklassniki url"), max_length=200, blank=True)
+    phone = models.CharField(_("phone number"), max_length=12, blank=True)
     owner = models.CharField(_('The fund owner'), max_length=128, blank=True)
-    address = models.ForeignKey('events.Address', verbose_name=_("address"), on_delete=models.CASCADE)
+    address = models.ForeignKey(
+        'events.Address', verbose_name=_("address"), on_delete=models.CASCADE, blank=True
+    )
+    telegram = models.URLField(_("telegram"), max_length=200, blank=True)
 
     class Meta:
         verbose_name = _("contact")
