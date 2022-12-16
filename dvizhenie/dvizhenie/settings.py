@@ -26,17 +26,19 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'uh+q3v_+##(f-@4wj)us-$#vn0rap!
 
 DEBUG = False
 
-SECURE_HSTS_SECONDS = 518400
+if not DEBUG:
 
-SECURE_SSL_REDIRECT = True
+    SECURE_HSTS_SECONDS = 518400
 
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_SSL_REDIRECT = True
 
-CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
-SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
-SECURE_HSTS_PRELOAD = True
+    SESSION_COOKIE_SECURE = True
+
+    SECURE_HSTS_PRELOAD = True
 
 ALLOWED_HOSTS = ['api.atlas.msk.ru', '127.0.0.1', 'localhost']
 
@@ -52,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
 
+    'corsheaders',
     'rest_framework',
     'drf_yasg',
     'django_filters',
@@ -69,6 +72,7 @@ if DEBUG:
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
