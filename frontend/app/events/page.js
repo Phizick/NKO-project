@@ -2,72 +2,29 @@
 import styles from "./events.module.css";
 import "../../styles/Home.css";
 import "../../styles/design_tokens.css";
+import api from '../../src/utils/Api';
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import heartImg from "../../images/heart.png";
 import EventCard from "../../components/EventCard/EventCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EventsModal from "../../components/EventsModal/EventsModal";
 
-const Lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea doloremque deleniti ipsum aperiam veniam dolorem earum ut inventore quos cumque doloribus sit numquam quisquam ad officiis aspernatur magni, accusamus dignissimos?`;
-const cardsInfo = [
-  {
-    id: 0,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "26 ноя/22",
-    is_finished: true,
-  },
-  {
-    id: 1,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "27 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 2,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "28 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 3,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "29 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 4,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "30 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 5,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "30 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 6,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "30 ноя/22",
-    is_finished: false,
-  },
-];
+
 
 export default function Events() {
   const classNames = require("classnames");
   const [state, setState] = useState("current");
   const [modal, setModal] = useState("");
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    api.getInfo('events')
+    .then(res => setEvents(res.results))
+    .catch(err => console.log(err))
+  }, [])
 
   const handleStateChange = (st) => {
     setState(st);
@@ -129,14 +86,14 @@ export default function Events() {
           </div>
         </div>
         <div className={styles.cards_holder}>
-          {state === "current" &&
-            cardsInfo.map((c) => {
+          {state === "current" && Boolean(events?.length) &&
+            events.map((c) => {
               return c.is_finished === false ? (
                 <EventCard key={c.id} {...c} cardInfo={c} setModal={setModal} />
               ) : null;
             })}
-          {state !== "current" &&
-            cardsInfo.map((c) => {
+          {state !== "current" && Boolean(events?.length) &&
+            events.map((c) => {
               return c.is_finished === true ? (
                 <EventCard key={c.id} {...c} cardInfo={c} setModal={setModal} />
               ) : null;

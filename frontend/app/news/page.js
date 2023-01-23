@@ -1,5 +1,6 @@
 "use client";
 import styles from "./news.module.css";
+import api from '../../src/utils/Api';
 import stylesErrorPage from "../../pages/404.module.css";
 import "../../styles/Home.css";
 import "../../styles/design_tokens.css";
@@ -17,13 +18,14 @@ import NewsModal from "../../components/NewsModal/NewsModal";
 
 export default function News() {
   const classNames = require("classnames");
+  const [news, setNews] = useState([]);
   const [hide, setHide] = useState({
     year: true,
     month: true,
   });
   const [modal, setModal] = useState("");
   const [filterBy, setFilterBy] = useState({ year: null, month: null });
-  const [filtered, setFiltered] = useState(cardsInfo);
+  const [filtered, setFiltered] = useState([]);
   useEffect(() => {
     filterCards(filtered);
   }, [filterBy]);
@@ -37,12 +39,12 @@ export default function News() {
   }
   function filterCards(cards) {
     if (!filterBy.year && !filterBy.month) {
-      setFiltered(cardsInfo);
+      setFiltered(news);
       return true;
     }
     if (filterBy.year && filterBy.month) {
       setFiltered([
-        ...cardsInfo.filter(
+        ...news.filter(
           (c) =>
             c.created_at.slice(0, 4) === filterBy.year.toString() &&
             c.created_at.slice(5, 7) === filterBy.month.toString()
@@ -52,7 +54,7 @@ export default function News() {
     }
     if (filterBy.year) {
       setFiltered([
-        ...cardsInfo.filter(
+        ...news.filter(
           (c) => c.created_at.slice(0, 4) === filterBy.year.toString()
         ),
       ]);
@@ -60,7 +62,7 @@ export default function News() {
     }
     if (filterBy.month) {
       setFiltered([
-        ...cardsInfo.filter(
+        ...news.filter(
           (c) => c.created_at.slice(5, 7) === filterBy.month.toString()
         ),
       ]);
@@ -68,6 +70,16 @@ export default function News() {
     }
     return cards;
   }
+  
+  useEffect(() => {
+    api.getInfo('news')
+    .then(res => {
+      setFiltered(res.results);
+      setNews(res.results)
+    
+    })
+    .catch(err => console.log(err))
+  }, [])
 
   return (
     <div className="App">
@@ -137,7 +149,7 @@ export default function News() {
           </div>
         </div>
         <div className={styles.cards_holder}>
-          {filtered.map((c) => {
+          {Boolean(filtered.length) && filtered.map((c) => {
             return (
               <NewsCard key={c.id} {...c} cardInfo={c} setModal={setModal} />
             );
