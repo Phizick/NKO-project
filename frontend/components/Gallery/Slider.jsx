@@ -9,6 +9,7 @@ import img7 from "../../images/slide7.jpg";
 import Image from "next/image";
 import stylesSlider from "./Slider.module.css";
 import { useState } from "react";
+
 function Slider() {
   const classNames = require("classnames");
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function Slider() {
       setCount(images.length - 1);
     }
   };
+  
   const rightBtnClick = () => {
     setCount(count + 1);
     if (count === images.length - 1) {
@@ -27,6 +29,7 @@ function Slider() {
     }
   };
   let filteredImages = images[count];
+
   return (
     <section className={stylesSlider.slider}>
       <div className={stylesSlider.div}>

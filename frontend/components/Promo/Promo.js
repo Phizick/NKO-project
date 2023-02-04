@@ -70,7 +70,7 @@ function Promo() {
       )}
       {isScreenBig ? (
         <div className={styles.links}>
-          <Link href="/aboutus" className={styles.aboutUs}>
+          <Link href="/about-us" className={styles.aboutUs}>
             О нашем проекте
           </Link>
           <Link href="/donation" className={styles.donation}>
@@ -84,7 +84,7 @@ function Promo() {
             Сделать пожертвование
             <Image src={heart} alt="Сердечко" className={styles.littleImg} />
           </Link>
-          <Link href="/aboutus" className={styles.aboutUs}>
+          <Link href="/about-us" className={styles.aboutUs}>
             О нашем проекте
           </Link>
         </div>
