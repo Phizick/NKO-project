@@ -1,30 +1,24 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import styles from './Footer.module.css';
 import telegram from "../../images/telegram.svg";
 import vk from "../../images/vk.svg"
 import ok from "../../images/ok.svg";
 import '../../styles/design_tokens.css';
+
 function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.columnfind}>
-          <h3 className={styles.heading}>Поиск по сайту</h3>
-            <form className={styles.searchform} >
-              <input type="search" className={styles.forminput} placeholder="Поиск по сайту"/>
-              <button className={styles.formbtn}></button>
-            </form>
-        </div>
         <div className={styles.content}>
           <div className={styles.contentinfo}>
             <h3 className={styles.heading}>Навигация</h3>
             <nav className={styles.links}>
-              <a href='/aboutus' className={styles.link}>О нас</a>
-              <a href='/news' className={styles.link}>Новости</a>
-              <a href='/events' className={styles.link}>Мероприятия</a>
-              <a href='/library' className={styles.link}>Библиотека</a>
-              <a href='/boardquest' className={styles.link}>Вопрос - ответ</a>
+              <Link href='/about-us' className={styles.link}>О нас</Link>
+              <Link href='/news' className={styles.link}>Новости</Link>
+              <Link href='/events' className={styles.link}>Мероприятия</Link>
+              <Link href='/boardquest' className={styles.link}>Вопрос - ответ</Link>
             </nav>
           </div>
           <div className={styles.contentsocial}>

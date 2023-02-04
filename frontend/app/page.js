@@ -58,7 +58,7 @@ function Page() {
           }).catch((err) => console.log(err.message));
   }, [])
 
-  console.log(activityTypes);
+  console.log(news);
 
 
   return (
