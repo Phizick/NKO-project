@@ -4,8 +4,19 @@ import style from "./Programs.module.css";
 import picture from "../../images/children-drawing-02.jpg";
 import Link from "next/link";
 import Image from "next/image";
+import api from "../../src/utils/Api";
+
 function Programs() {
   const [isScreenBig, setIsScreenBig] = useState(true);
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    api.getInfo('projects')
+    .then(res => setProjects(res.results))
+    .catch(err => console.log(err))
+  },[])
+
+  console.log(projects)
 
   useEffect(() => {
     window.addEventListener("resize", listenerCallback);

@@ -9,6 +9,7 @@ function Header() {
       <div className={styles.header_container}>
         <div className={styles.logo_container}>
           <BurgerMenuSVG />
+          <Link href="/">
           <svg
             className={styles.logo_sm}
             width="107"
@@ -124,6 +125,7 @@ function Header() {
               </defs>
             </svg>
           </div>
+          </Link>
           <div className={styles.vector_5}>
             <svg
               width="2"
