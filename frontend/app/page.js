@@ -26,7 +26,7 @@ function Page() {
   const [projects, setProjects] = useState([]);
   const [questions, setQuestions] = useState([]);
 
- useEffect(() => {
+  useEffect(() => {
     Promise.all([
 			api.getInfo('about'),
       api.getInfo('activities'),
@@ -57,6 +57,8 @@ function Page() {
             setQuestions(questionsInfo.results);
           }).catch((err) => console.log(err.message));
   }, [])
+
+  console.log(about);
 
 
   return (
