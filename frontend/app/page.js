@@ -58,7 +58,7 @@ function Page() {
           }).catch((err) => console.log(err.message));
   }, [])
 
-  console.log(answers);
+  console.log(activityTypes);
 
 
   return (
