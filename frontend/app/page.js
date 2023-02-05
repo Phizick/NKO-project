@@ -11,6 +11,7 @@ import Partners from "../components/Partners/Partners";
 import Questions from "../components/Questions/Questions";
 import Donation from "../components/Donation/Donation";
 import Gallery from "../components/Gallery/Gallery";
+
 function Page() {
 
   const [about, setAbout] = useState([]);
@@ -58,7 +59,11 @@ function Page() {
           }).catch((err) => console.log(err.message));
   }, [])
 
-  console.log(news);
+  console.log(activities);
+  console.log(activityTypes);
+
+  // console.log(partners);
+  // console.log(files)
 
 
   return (

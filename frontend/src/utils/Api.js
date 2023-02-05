@@ -22,7 +22,7 @@ class Api {
 }
 
 const api = new Api({
-    url: 'https://api.atlas.msk.ru/api/v1',
+    url: 'https://motionfoundation.ru/api/v1/',
     headers: {
       "Content-Type": "application/json",
     }

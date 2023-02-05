@@ -7,6 +7,7 @@
 }
 
 .title {
+  max-width: 1232px;
   font-family: 'Sreda';
   font-style: normal;
   font-weight: 400;
@@ -14,6 +15,7 @@
   line-height: 100%;
   margin: 0;
   padding-top: 27px;
+  text-align: center;
 }
 
 .description {
@@ -78,6 +80,10 @@
 }
 
 @media(max-width: 1439px) {
+  .title {
+    padding: 27px 104px;
+  }
+
   .description {
     padding: 35px 104px 0;
   }

@@ -8,16 +8,16 @@ import Project from '../Project/Project'
 
 function Programs() {
   const [isScreenBig, setIsScreenBig] = useState(true);
-  const [projects, setProjects] = useState([]);
   const [activityTypes, setActivityTypes] = useState([]);
+  const [activities, setActivities] = useState([]);
 
   useEffect(() => {
     Promise.all([
-      api.getInfo('projects'),
+      api.getInfo('activities'),
       api.getInfo('activity-types')
     ])
-    .then(([projectsInfo, activityTypesInfo]) => {
-      setProjects(projectsInfo.results)
+    .then(([activitiesInfo, activityTypesInfo]) => {
+      setActivities(activitiesInfo.results);
       setActivityTypes(activityTypesInfo.results);
     })
     .catch(err => console.log(err))
@@ -25,7 +25,7 @@ function Programs() {
 
   const events = []
 
-  projects.map(project => {
+  activities.map(project => {
     activityTypes.map(type => {
 
       if(project.id === type.id) {
@@ -36,7 +36,6 @@ function Programs() {
           id: project.id
         })
       }
-
     })
   });
 
@@ -91,7 +90,7 @@ function Programs() {
         ) : (
           <>
             <h1 className={style.title}>Наши программы</h1>
-            {(projects !== undefined && projects.map(data => {
+            {(events !== undefined && events.map(data => {
               return(
                 <Project 
                   data={data} 

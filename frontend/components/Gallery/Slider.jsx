@@ -1,19 +1,38 @@
 "use client";
-import img1 from "../../images/slide1.jpg";
-import img2 from "../../images/slide2.jpg";
-import img3 from "../../images/slide3.jpg";
-import img4 from "../../images/slide4.jpg";
-import img5 from "../../images/slide5.jpg";
-import img6 from "../../images/slide6.jpg";
-import img7 from "../../images/slide7.jpg";
 import Image from "next/image";
 import stylesSlider from "./Slider.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import api from "../../src/utils/Api";
 
 function Slider() {
   const classNames = require("classnames");
   const [count, setCount] = useState(0);
-  const images = [img1, img2, img3, img4, img5, img6, img7];
+  const [files, setFiles] = useState([]);
+
+  useEffect(() => {
+    api.getInfo('files')
+    .then(filesInfo => setFiles(filesInfo.results))
+    .catch(err => console.log(err))
+  }, []);
+  
+  const images = [];
+
+  console.log(files)
+
+  files.map(file => {
+    if(file.is_fond_doc === false && file.file_field !== null) {
+      images.push({
+      src: file.file_field,
+      height: 960,
+      width: 1280,
+      blurHeight: 6,
+      blurWidth: 8,
+      alt: file.capture
+      })
+    }
+  })
+
+  console.log(images)
 
   const leftBtnClick = () => {
     setCount(count - 1);
@@ -30,6 +49,9 @@ function Slider() {
   };
   let filteredImages = images[count];
 
+  // console.log(files.map(file => file.is_fond_doc))
+  // console.log(filteredImages.src)
+
   return (
     <section className={stylesSlider.slider}>
       <div className={stylesSlider.div}>
@@ -41,13 +63,16 @@ function Slider() {
           className={classNames(stylesSlider.btn, stylesSlider.btn_right)}
           onClick={rightBtnClick}
         ></button>
-        <Image
-          className={stylesSlider.slide}
-          src={filteredImages.src}
-          width={filteredImages.width}
-          height={filteredImages.height}
-          alt="Фото"
-        />
+        {(filteredImages !== undefined && 
+            <Image
+            className={stylesSlider.slide}
+            src={filteredImages.src}
+            width={filteredImages.width}
+            height={filteredImages.height}
+            alt={filteredImages.alt}
+          />
+        )}
+
       </div>
     </section>
   );
