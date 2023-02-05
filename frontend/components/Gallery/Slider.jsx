@@ -17,7 +17,7 @@ function Slider() {
   
   const images = [];
 
-  console.log(files)
+  // console.log(files)
 
   files.map(file => {
     if(file.is_fond_doc === false && file.file_field !== null) {
@@ -31,8 +31,6 @@ function Slider() {
       })
     }
   })
-
-  console.log(images)
 
   const leftBtnClick = () => {
     setCount(count - 1);
@@ -48,9 +46,6 @@ function Slider() {
     }
   };
   let filteredImages = images[count];
-
-  // console.log(files.map(file => file.is_fond_doc))
-  // console.log(filteredImages.src)
 
   return (
     <section className={stylesSlider.slider}>

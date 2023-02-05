@@ -25,10 +25,13 @@ function Programs() {
 
   const events = []
 
+  // console.log(activities);
+  // console.log(activityTypes);
+
   activities.map(project => {
     activityTypes.map(type => {
 
-      if(project.id === type.id) {
+      if(project.activity_type === type.id) {
         events.push({
           name: project.name,
           description: project.description,
@@ -38,6 +41,9 @@ function Programs() {
       }
     })
   });
+
+  // console.log(events)
+  // console.log(events.slice(-3))
 
   useEffect(() => {
     window.addEventListener("resize", listenerCallback);
@@ -72,7 +78,7 @@ function Programs() {
         {isScreenBig ? (
           <>
             <h1 className={style.title}>Наши программы</h1>
-            {(events !== undefined && events.map(data => {
+            {(events !== undefined && events.slice(-3).map(data => {
               return(
                 <Project 
                   data={data} 
@@ -90,7 +96,7 @@ function Programs() {
         ) : (
           <>
             <h1 className={style.title}>Наши программы</h1>
-            {(events !== undefined && events.map(data => {
+            {(events !== undefined && events.slice(-3).map(data => {
               return(
                 <Project 
                   data={data} 
