@@ -20,9 +20,6 @@ function Questions() {
     .catch(err => console.log(err))
   }, []);
 
-  console.log(questions)
-  console.log(answers)
-
   const questionsAndAnswers = []
 
   questions.map(question => {
@@ -37,10 +34,9 @@ function Questions() {
     })
   })
 
-  console.log(questionsAndAnswers)
-
   return (
     <div className={styles.question_component}>
+      <h1 className={styles.title}>Ответы на вопросы</h1>
       {(questionsAndAnswers !== undefined && questionsAndAnswers.map(question => {
         return(
           <QuestionsComponent data={question} key={question.id} />
