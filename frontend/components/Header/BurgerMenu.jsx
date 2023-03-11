@@ -14,9 +14,6 @@ const BurgerMenu = () => {
         <Link href="/events" className="links-text">
           Мероприятия
         </Link>
-        <Link href="/useful" className="links-text">
-          Полезное
-        </Link>
       </div>
     </div>
   );

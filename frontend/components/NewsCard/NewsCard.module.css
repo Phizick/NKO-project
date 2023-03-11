@@ -1,6 +1,6 @@
 .card {
   width: 400px;
-  height: 422px;
+  height: 510px;
   background: rgba(22, 79, 100, 0.78);
   border-radius: 0px;
   border-bottom-right-radius: 25px;
@@ -22,8 +22,8 @@
 
 .event_preview {
   width: 400px;
-  height: 157px;
-  object-fit: cover;
+  height: 250px;
+  object-fit: fill;
 }
 
 .event_preview img {

@@ -156,9 +156,6 @@ function Header() {
             <Link href="/events" className={styles.links_text}>
               Мероприятия
             </Link>
-            <Link href="/useful" className={styles.links_text}>
-              Полезное
-            </Link>
             <button className={styles.button}>
               Пожертвовать
               <svg

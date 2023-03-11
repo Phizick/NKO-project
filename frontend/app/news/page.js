@@ -14,6 +14,7 @@ import Dropdown from "../../components/Sort/Dropdown";
 import { monthsToFilter } from "./monthsList";
 import { cardsInfo } from "./MockData.cards";
 import NewsModal from "../../components/NewsModal/NewsModal";
+import api from "../../src/utils/Api";
 
 export default function News() {
   const classNames = require("classnames");
@@ -23,26 +24,36 @@ export default function News() {
   });
   const [modal, setModal] = useState("");
   const [filterBy, setFilterBy] = useState({ year: null, month: null });
-  const [filtered, setFiltered] = useState(cardsInfo);
+  const [filtered, setFiltered] = useState(null);
+
+  useEffect(() => {
+    api.getInfo('news')
+    .then(res => setFiltered(res.results))
+    .catch(err => console.log(err))
+  }, [])
+
   useEffect(() => {
     filterCards(filtered);
   }, [filterBy]);
+
   function getYearsToSort() {
     const currentYear = new Date().getFullYear();
     let yearsToSort = Array.from(Array(4), (el, index) => currentYear - index);
     return yearsToSort;
   }
+
   function handleSortChange(label, item) {
     setFilterBy((prevState) => ({ ...prevState, [label]: item }));
   }
+  
   function filterCards(cards) {
     if (!filterBy.year && !filterBy.month) {
-      setFiltered(cardsInfo);
+      setFiltered(filtered);
       return true;
     }
     if (filterBy.year && filterBy.month) {
       setFiltered([
-        ...cardsInfo.filter(
+        ...filtered.filter(
           (c) =>
             c.created_at.slice(0, 4) === filterBy.year.toString() &&
             c.created_at.slice(5, 7) === filterBy.month.toString()
@@ -52,7 +63,7 @@ export default function News() {
     }
     if (filterBy.year) {
       setFiltered([
-        ...cardsInfo.filter(
+        ...filtered.filter(
           (c) => c.created_at.slice(0, 4) === filterBy.year.toString()
         ),
       ]);
@@ -60,7 +71,7 @@ export default function News() {
     }
     if (filterBy.month) {
       setFiltered([
-        ...cardsInfo.filter(
+        ...filtered.filter(
           (c) => c.created_at.slice(5, 7) === filterBy.month.toString()
         ),
       ]);
@@ -69,101 +80,104 @@ export default function News() {
     return cards;
   }
 
+  console.log(filtered);
+
   return (
     <div className="App">
-      <div className="container">
-        <NewsModal modal={modal} setModal={setModal} />
-
-        <Header />
-        <div className={styles.stepper}>
-          <Link href="/" className={styles.stepper_text}>
-            Главная
-          </Link>
-          <div className={styles.arrow}></div>
-          <Link
-            href="/news"
-            className={classNames(styles.stepper_text, styles.text_active)}
-          >
-            Новости
-          </Link>
-        </div>
-        <div className={styles.page_title}>
-          <div>
-            <h1 className={styles.event_title}>Новости</h1>
+      <Header />
+      {filtered !== null && 
+        <div className="container">
+          <NewsModal modal={modal} setModal={setModal} />
+          <div className={styles.stepper}>
+            <Link href="/" className={styles.stepper_text}>
+              Главная
+            </Link>
+            <div className={styles.arrow}></div>
+            <Link
+              href="/news"
+              className={classNames(styles.stepper_text, styles.text_active)}
+            >
+              Новости
+            </Link>
           </div>
-          <div className={styles.btn_holder}>
-            <div className={styles.btn_placeholder}>
-              <button
-                className={styles.btn}
-                onClick={() =>
-                  setHide((prevState) => ({ ...prevState, year: !hide.year }))
-                }
-              >
-                {filterBy.year ? filterBy.year : "Год"}{" "}
-                <Image src={arrowDown} alt="Image" />
-              </button>
-              <Dropdown
-                items={getYearsToSort()}
-                hide={hide}
-                setHide={setHide}
-                label={"year"}
-                handleSortChange={handleSortChange}
-                setFilterBy={setFilterBy}
-              />
+          <div className={styles.page_title}>
+            <div>
+              <h1 className={styles.event_title}>Новости</h1>
             </div>
-            <div className={styles.btn_placeholder}>
-              <button
-                className={classNames(styles.btn, styles.disabled_bg)}
-                onClick={() =>
-                  setHide((prevState) => ({ ...prevState, month: !hide.month }))
-                }
-              >
-                {filterBy.month
-                  ? Object.entries(monthsToFilter).find(
-                      (i) => i[1] === filterBy.month
-                    )[0]
-                  : "Месяц"}{" "}
-                <Image src={arrowDown} alt="Image" />
-              </button>
-              <Dropdown
-                items={monthsToFilter}
-                hide={hide}
-                setHide={setHide}
-                label={"month"}
-                handleSortChange={handleSortChange}
-                setFilterBy={setFilterBy}
-              />
-            </div>
-          </div>
-        </div>
-        <div className={styles.cards_holder}>
-          {filtered.map((c) => {
-            return (
-              <NewsCard key={c.id} {...c} cardInfo={c} setModal={setModal} />
-            );
-          })}
-          {filtered.length === 0 && (
-            <div className={styles.mydiv}>
-              <h1
-                className={classNames(stylesErrorPage.title, styles.colorCyan)}
-              >
-                Кажется, здесь пусто...
-              </h1>
-              <Link className={stylesErrorPage.link} href="/">
+            <div className={styles.btn_holder}>
+              <div className={styles.btn_placeholder}>
                 <button
-                  className={classNames(
-                    stylesErrorPage.button,
-                    styles.colorWhite
-                  )}
+                  className={styles.btn}
+                  onClick={() =>
+                    setHide((prevState) => ({ ...prevState, year: !hide.year }))
+                  }
                 >
-                  Перейти на главную страницу
+                  {filterBy.year ? filterBy.year : "Год"}{" "}
+                  <Image src={arrowDown} alt="Image" />
                 </button>
-              </Link>
+                <Dropdown
+                  items={getYearsToSort()}
+                  hide={hide}
+                  setHide={setHide}
+                  label={"year"}
+                  handleSortChange={handleSortChange}
+                  setFilterBy={setFilterBy}
+                />
+              </div>
+              <div className={styles.btn_placeholder}>
+                <button
+                  className={classNames(styles.btn, styles.disabled_bg)}
+                  onClick={() =>
+                    setHide((prevState) => ({ ...prevState, month: !hide.month }))
+                  }
+                >
+                  {filterBy.month
+                    ? Object.entries(monthsToFilter).find(
+                        (i) => i[1] === filterBy.month
+                      )[0]
+                    : "Месяц"}{" "}
+                  <Image src={arrowDown} alt="Image" />
+                </button>
+                <Dropdown
+                  items={monthsToFilter}
+                  hide={hide}
+                  setHide={setHide}
+                  label={"month"}
+                  handleSortChange={handleSortChange}
+                  setFilterBy={setFilterBy}
+                />
+              </div>
             </div>
-          )}
+          </div>
+          <div className={styles.cards_holder}>
+            {filtered.map((c) => {
+              return (
+                <NewsCard key={c.id} {...c} cardInfo={c} setModal={setModal} />
+              );
+            })}
+            {filtered.length === 0 && (
+              <div className={styles.mydiv}>
+                <h1
+                  className={classNames(stylesErrorPage.title, styles.colorCyan)}
+                >
+                  Кажется, здесь пусто...
+                </h1>
+                <Link className={stylesErrorPage.link} href="/">
+                  <button
+                    className={classNames(
+                      stylesErrorPage.button,
+                      styles.colorWhite
+                    )}
+                  >
+                    Перейти на главную страницу
+                  </button>
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
-        <Footer />
-      </div>
+      }
+      <Footer />
     </div>
   );
 }

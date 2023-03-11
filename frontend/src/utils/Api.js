@@ -11,21 +11,32 @@ class Api {
         return res.json();
     }
 
-    getInfo = (url) => {
-        return fetch(`${this._url}/${url}`, {
-            method: 'GET',
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }).then(this._getResponseData);
+    getInfo = async (url) => {
+        const res = await fetch(`${this._url}/${url}`, {
+        method: 'GET',
+        headers: this._headers
+      });
+      console.log(res);
+      return this._getResponseData(res);
     }
 }
 
+// Тестовый API:
+
 const api = new Api({
-    url: 'https://motionfoundation.ru/api/v1/',
-    headers: {
-      "Content-Type": "application/json",
-    }
+  url: 'https://api.atlas.msk.ru/api/v1',
+  headers: {
+    "Content-Type": "application/json",
+  }
 });
+
+// const api = new Api({
+//     url: 'https://motionfoundation.ru/api/v1/',
+//     headers: {
+//       "Content-Type": "application/json",
+//     }
+// });
+
+
 
 export default api;

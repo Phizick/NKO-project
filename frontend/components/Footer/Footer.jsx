@@ -18,7 +18,6 @@ function Footer() {
               <Link href='/about-us' className={styles.link}>О нас</Link>
               <Link href='/news' className={styles.link}>Новости</Link>
               <Link href='/events' className={styles.link}>Мероприятия</Link>
-              <Link href='/boardquest' className={styles.link}>Вопрос - ответ</Link>
             </nav>
           </div>
           <div className={styles.contentsocial}>

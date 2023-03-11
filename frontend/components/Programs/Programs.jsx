@@ -25,8 +25,6 @@ function Programs() {
 
   const events = []
 
-  // console.log(activities);
-  // console.log(activityTypes);
 
   activities.map(project => {
     activityTypes.map(type => {
@@ -41,9 +39,6 @@ function Programs() {
       }
     })
   });
-
-  // console.log(events)
-  // console.log(events.slice(-3))
 
   useEffect(() => {
     window.addEventListener("resize", listenerCallback);
