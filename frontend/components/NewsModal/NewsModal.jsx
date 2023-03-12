@@ -5,6 +5,8 @@ import Image from "next/image";
 
 const NewsModal = ({ modal, setModal }) => {
 
+  console.log(modal);
+
   return (
     <div
       className={"modal" + (modal.length === 0 ? " hide" : "")}
@@ -15,7 +17,7 @@ const NewsModal = ({ modal, setModal }) => {
         <div className="card-holder">
           <Image src={modal.picture} width = '400' height='350' alt="Image" priority />
         </div>
-        <h3 className="modal-title">{modal.name}</h3>
+        <h3 className="modal-title">{modal.title}</h3>
         <p className="modal-body">{modal.description}</p>
         <div className="modal-footer">
           <p className="modal-date">
