@@ -11,6 +11,36 @@
   overflow-y: auto;
 }
 
+.closeIcon {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  border-radius: 100%;
+  background-image: url("../../images/close-icon-2.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: opacity .1s linear;
+  cursor: pointer;
+}
+
+.closeIcon:hover {
+  opacity: .6;
+}
+
+.card-holder img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: scale-down;
+  object-position: center center;
+  margin: 20px 0;
+}
+
 @media (max-width: 600px) {
   .modal-window {
     width: 90%;
@@ -30,9 +60,7 @@
 
 .card-holder img {
   width: 100%;
-  height: 30vh;
   border-radius: 20px;
-  object-fit: cover;
 }
 
 .modal-title {

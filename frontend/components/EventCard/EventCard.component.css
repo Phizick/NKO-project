@@ -1,8 +1,9 @@
 .card {
   width: 400px;
-  height: 422px;
+  height: 510px;
   background: rgba(22, 79, 100, 0.78);
-  border-radius: 20px;
+  border-radius: 0px;
+  border-bottom-right-radius: 25px;
   position: relative;
   z-index: 0;
   display: flex;
@@ -20,8 +21,18 @@
 
 .event-preview {
   width: 400px;
-  height: 157px;
-  object-fit: cover;
+  height: 250px;
+  object-fit: fill;
+}
+
+.item-left {
+  width: 15px;
+}
+
+.item-online {
+  position: absolute;
+  bottom: 13px;
+  right: 160px;
 }
 
 @media (max-width: 400px) {
@@ -39,10 +50,6 @@
   .event-preview img {
     width: 100%;
     height: 100%;
-  }
-
-  .item-left {
-    width: 15px;
   }
 }
 
@@ -106,5 +113,5 @@
   line-height: 100%;
   /* identical to box height, or 14px */
 
-  color: rgba(255, 255, 255, 0.42);
+  color: rgba(255, 255, 255, 0.6);
 }

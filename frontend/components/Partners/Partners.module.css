@@ -1,7 +1,9 @@
 .partners {
-    margin: 96px 0;
+    margin: 96px auto;
     background-color: var(--Gradation-200);
-    padding: 40px 104px;
+    padding: 40px 0;
+    max-width: 1440px;
+    width: 100%;
 }
 
 .title {

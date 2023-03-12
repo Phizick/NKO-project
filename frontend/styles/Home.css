@@ -7,3 +7,21 @@ body {
   text-align: center;
   font-family: Inter;
 }
+
+::-webkit-scrollbar-track {
+  background-color: var(--Gradation-200);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background-color: var(--Gradation-300);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--Gradation-400);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}

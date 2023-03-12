@@ -8,75 +8,45 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import heartImg from "../../images/heart.png";
 import EventCard from "../../components/EventCard/EventCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EventsModal from "../../components/EventsModal/EventsModal";
-
-const Lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea doloremque deleniti ipsum aperiam veniam dolorem earum ut inventore quos cumque doloribus sit numquam quisquam ad officiis aspernatur magni, accusamus dignissimos?`;
-const cardsInfo = [
-  {
-    id: 0,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "26 ноя/22",
-    is_finished: true,
-  },
-  {
-    id: 1,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "27 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 2,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "28 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 3,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "29 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 4,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "30 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 5,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "30 ноя/22",
-    is_finished: false,
-  },
-  {
-    id: 6,
-    name: "Название",
-    description: Lorem,
-    start_datetime: "30 ноя/22",
-    is_finished: false,
-  },
-];
+import api from "../../src/utils/Api";
 
 export default function Events() {
   const classNames = require("classnames");
+  const moment = require('moment'); 
   const [state, setState] = useState("current");
   const [modal, setModal] = useState("");
+  const [cardsInfo, setCardsInfo] = useState(null)
+
+  useEffect(() => {
+    api.getInfo('events')
+    .then(res => setCardsInfo(res.results))
+    .catch(err => console.log(err))
+  }, [])
 
   const handleStateChange = (st) => {
     setState(st);
   };
+
+  const nowTime = moment().format();
+  const currentDay = nowTime.toString().slice(0, 19);
+
+  const checkEvent = (item) => {
+    const dayOfEvent = item.end_timestamp.toString().slice(0, 19);
+
+    if(dayOfEvent === currentDay) {
+      return true
+    }
+    return false
+  }
+
+  console.log(cardsInfo);
+
   return (
     <div className="App">
       <div className="container">
         <EventsModal modal={modal} setModal={setModal} />
-
         <Header />
         <div className={styles.stepper}>
           <Link href="/" className={styles.stepper_text}>
@@ -91,9 +61,7 @@ export default function Events() {
           </Link>
         </div>
         <div className={styles.page_title}>
-          <div>
-            <h1 className={styles.event_title}>Мероприятия</h1>
-          </div>
+          <h1 className={styles.event_title}>Мероприятия</h1>
           <div className={styles.btn_holder}>
             {state === "current" ? (
               <>
@@ -129,16 +97,16 @@ export default function Events() {
           </div>
         </div>
         <div className={styles.cards_holder}>
-          {state === "current" &&
+          {cardsInfo !== null && state === "current" &&
             cardsInfo.map((c) => {
-              return c.is_finished === false ? (
-                <EventCard key={c.id} {...c} cardInfo={c} setModal={setModal} />
+              return checkEvent(c) === false ? (
+                <EventCard key={c.id} {...c} cardInfo={c} setModal={setModal} checkEvent={checkEvent(c)} />
               ) : null;
             })}
-          {state !== "current" &&
+          {cardsInfo !== null && state !== "current" &&
             cardsInfo.map((c) => {
-              return c.is_finished === true ? (
-                <EventCard key={c.id} {...c} cardInfo={c} setModal={setModal} />
+              return checkEvent(c) === true ? (
+                <EventCard key={c.id} {...c} cardInfo={c} setModal={setModal} checkEvent={checkEvent(c)} />
               ) : null;
             })}
         </div>

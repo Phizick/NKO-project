@@ -4,6 +4,12 @@
   color: var(--Gradation-300);
 }
 
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .container {
   display: flex;
   justify-content: space-between;

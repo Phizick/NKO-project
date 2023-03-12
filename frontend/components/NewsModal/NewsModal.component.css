@@ -36,7 +36,6 @@
 
 .card-holder img {
   width: 100%;
-  height: 454px;
   border-radius: 20px;
   object-fit: scale-down;
   object-position: center center;
@@ -73,7 +72,6 @@
 
 .card-holder img {
   width: 100%;
-  height: 40vh;
   border-radius: 20px;
 }
 

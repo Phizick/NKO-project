@@ -10,8 +10,8 @@ const NewsCard = ({ title, short_description, created_at, setModal, cardInfo, pi
         <Image 
           src={picture}
           width = '400' 
-          height='200' 
-          alt={title} 
+          height='250' 
+          alt="Image" 
           priority 
         />
       </div>

@@ -1,5 +1,8 @@
 .stepper {
-  margin: 35px 0 0 6%;
+  max-width: 1440px;
+  width: 100%;
+  margin: 35px auto 0;
+  padding-left: 30px;
   display: flex;
 }
 
@@ -32,7 +35,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 50px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto 50px;
 }
 
 .event_title {

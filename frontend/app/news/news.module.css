@@ -1,6 +1,9 @@
 .stepper {
-  margin: 35px 0 0 6%;
+  margin: 35px auto 0;
+  padding-left: 30px;
   display: flex;
+  max-width: 1440px;
+  width: 100%;
 }
 
 .arrow {
