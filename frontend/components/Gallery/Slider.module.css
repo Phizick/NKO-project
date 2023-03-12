@@ -20,6 +20,8 @@
 
 .slider {
   margin: 0 16px;
+  width: auto;
+  height: auto;
 }
 
 .btn {

@@ -10,42 +10,27 @@ function Slider() {
   const [files, setFiles] = useState([]);
 
   useEffect(() => {
-    api.getInfo('files')
+    api.getInfo('gallery')
     .then(filesInfo => setFiles(filesInfo.results))
     .catch(err => console.log(err))
   }, []);
   
-  const images = [];
-
-  // console.log(files)
-
-  files.map(file => {
-    if(file.is_fond_doc === false && file.file_field !== null) {
-      images.push({
-      src: file.file_field,
-      height: 960,
-      width: 1280,
-      blurHeight: 6,
-      blurWidth: 8,
-      alt: file.capture
-      })
-    }
-  })
 
   const leftBtnClick = () => {
     setCount(count - 1);
     if (count === 0) {
-      setCount(images.length - 1);
+      setCount(files.length - 1);
     }
   };
   
   const rightBtnClick = () => {
     setCount(count + 1);
-    if (count === images.length - 1) {
+    if (count === files.length - 1) {
       setCount(0);
     }
   };
-  let filteredImages = images[count];
+
+  let filteredImages = files[count];
 
   return (
     <section className={stylesSlider.slider}>
@@ -61,10 +46,11 @@ function Slider() {
         {(filteredImages !== undefined && 
             <Image
             className={stylesSlider.slide}
-            src={filteredImages.src}
-            width={filteredImages.width}
-            height={filteredImages.height}
-            alt={filteredImages.alt}
+            src={filteredImages.picture}
+            width='1280'
+            height='960'
+            alt='Галерея'
+            priority
           />
         )}
 

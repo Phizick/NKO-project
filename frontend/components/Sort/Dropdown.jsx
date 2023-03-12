@@ -1,7 +1,6 @@
 "use client";
 
 import classNames from "classnames";
-import { useState } from "react";
 import styles from "./Dropdown.module.css";
 
 const Dropdown = ({
@@ -12,6 +11,7 @@ const Dropdown = ({
   handleSortChange,
   setFilterBy,
 }) => {
+
   return (
     <div
       className={classNames(
