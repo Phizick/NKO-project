@@ -5,8 +5,6 @@ import Image from "next/image";
 
 const NewsModal = ({ modal, setModal }) => {
 
-  console.log(modal);
-
   return (
     <div
       className={"modal" + (modal.length === 0 ? " hide" : "")}
@@ -20,7 +18,7 @@ const NewsModal = ({ modal, setModal }) => {
         <h3 className="modal-title">{modal.title}</h3>
         <p className="modal-body">{modal.description}</p>
         <div className="modal-footer">
-          <p className="modal-date">
+          <p className="modalDate">
             {modal.created_at ? modal.created_at.slice(0, 10) : null}
           </p>
         </div>

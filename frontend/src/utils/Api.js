@@ -16,7 +16,6 @@ class Api {
         method: 'GET',
         headers: this._headers
       });
-      console.log(res);
       return this._getResponseData(res);
     }
 }

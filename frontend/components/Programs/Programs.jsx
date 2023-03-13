@@ -13,8 +13,8 @@ function Programs() {
 
   useEffect(() => {
     Promise.all([
-      api.getInfo('activities'),
-      api.getInfo('activity-types')
+      api.getInfo('projects'),
+      api.getInfo('projecttype')
     ])
     .then(([activitiesInfo, activityTypesInfo]) => {
       setActivities(activitiesInfo.results);

@@ -3,7 +3,7 @@ import styles from "./NewsCard.module.css";
 import Image from "next/image";
 
 const NewsCard = ({ title, short_description, created_at, setModal, cardInfo, picture }) => {
-  console.log(picture);
+
   return (
     <div className={styles.card} onClick={() => setModal({ ...cardInfo })}>
       <div className={styles.event_preview}>

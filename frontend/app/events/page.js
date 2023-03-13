@@ -29,24 +29,22 @@ export default function Events() {
     setState(st);
   };
 
-  const nowTime = moment().format();
-  const currentDay = nowTime.toString().slice(0, 19);
+  const nowTime = moment().format('DD.MM.YYYY h:mm:ss');
+  const currentDay = nowTime.toString().slice(0, 20);
 
   const checkEvent = (item) => {
     const dayOfEvent = item.end_timestamp.toString().slice(0, 19);
 
-    if(dayOfEvent === currentDay) {
+    if(dayOfEvent === currentDay || dayOfEvent < currentDay) {
       return true
     }
     return false
   }
 
-  console.log(cardsInfo);
-
   return (
     <div className="App">
       <div className="container">
-        <EventsModal modal={modal} setModal={setModal} />
+        {modal && <EventsModal modal={modal} setModal={setModal} />}
         <Header />
         <div className={styles.stepper}>
           <Link href="/" className={styles.stepper_text}>

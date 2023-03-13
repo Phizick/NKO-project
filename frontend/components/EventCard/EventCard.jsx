@@ -1,11 +1,10 @@
 "use client";
 import "./EventCard.component.css";
 import Image from "next/image";
-import preview from "../../images/event_preview.png";
 
 const EventCard = ({
   name,
-  description,
+  short_description,
   picture,
   start_timestamp,
   checkEvent,
@@ -13,7 +12,6 @@ const EventCard = ({
   setModal,
   cardInfo,
 }) => {
-  console.log(checkEvent);
 
   const dayEvent = start_timestamp.slice(0, 10);
 
@@ -29,13 +27,13 @@ const EventCard = ({
         />
       </div>
       <h3 className="card-title">{name}</h3>
-      <p className="card-body">{description}</p>
+      <p className="card-body">{short_description}</p>
       <div className="footer-container">
         <div className="card-footer">
           <p className="item-left">
-            {checkEvent === true
+            {checkEvent === false
               ? "Текущее мероприятия"
-              : "Прошедшее мероприятия"}
+              : "Мероприятие завершилось"}
           </p>
           <p className="item-online">
             {is_online === true

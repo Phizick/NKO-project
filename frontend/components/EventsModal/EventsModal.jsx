@@ -2,10 +2,31 @@
 
 import "./EventsModal.component.css";
 import Image from "next/image";
-import img from "../../images/card_preview.png";
+import { useEffect, useState } from "react";
+import api from "../../src/utils/Api";
 
 const EventsModal = ({ modal, setModal }) => {
-  console.log(modal);
+  const [address, setAddress] = useState(null)
+  const moment = require('moment');
+  const nowTime = moment().format('DD.MM.YYYY h:mm:ss');
+  const currentDay = nowTime.toString().slice(0, 20);
+
+  useEffect(() => {
+    api.getInfo('addresses')
+    .then(res => setAddress(res.results))
+    .catch(err => console.log(err))
+  }, [])
+
+  const checkEvent = () => {
+    const dayOfEvent = modal.start_timestamp;
+    if(dayOfEvent === currentDay || dayOfEvent < currentDay) {
+      return true
+    }
+    return false
+  }
+
+  const checkAddress = address !== null && address.filter(item => item.id === modal.addresses[0]);
+  const addressEvent = checkAddress !== false && checkAddress.length && checkAddress[0].address;
 
   return (
     <div
@@ -20,7 +41,18 @@ const EventsModal = ({ modal, setModal }) => {
         <h3 className="modal-title">{modal.name}</h3>
         <p className="modal-body">{modal.description}</p>
         <div className="modal-footer">
-          <p className="modal-date">{modal.start_datetime}</p>
+          <p className="modal-date">
+            {checkEvent() === false
+              ? `Старт: ${modal.start_timestamp}` 
+              : 'Мероприятие завершилось'
+            }
+          </p>
+          <p className="modal-date">
+            {modal.is_online === true
+              ? 'Online' 
+              : addressEvent !== false && `Адрес: ${addressEvent}`
+            }
+          </p>
         </div>
       </div>
     </div>

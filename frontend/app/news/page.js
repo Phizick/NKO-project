@@ -79,14 +79,12 @@ export default function News() {
     return cards;
   }
 
-  console.log(filtered);
-
   return (
     <div className="App">
       <Header />
       {filtered !== null && 
         <div className="container">
-          <NewsModal modal={modal} setModal={setModal} />
+          {modal && <NewsModal modal={modal} setModal={setModal} />}
           <div className={styles.stepper}>
             <Link href="/" className={styles.stepper_text}>
               Главная
