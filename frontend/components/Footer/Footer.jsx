@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from './Footer.module.css';
@@ -6,8 +6,17 @@ import telegram from "../../images/telegram.svg";
 import vk from "../../images/vk.svg"
 import ok from "../../images/ok.svg";
 import '../../styles/design_tokens.css';
+import api from "../../src/utils/Api";
 
 function Footer() {
+  const [contactsInfo, setContactsInfo] = useState(null)
+
+  useEffect(() => {
+    api.getInfo('contacts')
+    .then(res => setContactsInfo(res.results))
+    .catch(err => console.log(err))
+  }, [])
+
   return (
     <footer className={styles.footer}>
       <div className={styles.wrapper}>
@@ -22,20 +31,24 @@ function Footer() {
               </nav>
             </div>
             <div className={styles.contentsocial}>
-              <h3 className={styles.heading}>Контакты</h3>
-              <nav className={styles.sociallinks}>
-                <a href='#' className={styles.sociallink} target="_blank">
-                <Image src={telegram} alt="Телеграм" className={styles.socialicon}/>
-                </a>
-                <a href='https://vk.com/fondmotionfoundation' className={styles.link} target="_blank">
-                <Image src={vk} alt="ВК" className={styles.socialicon} />
-                </a>
-                <a href='#' className={styles.link} target="_blank">
-                <Image src={ok} alt="Одноклассники" className={styles.socialicon}/>
-                </a>
-              </nav>
-              <p className={styles.info}>+7 921 971 2439</p>
-              <p className={styles.info}>motionfoundation@mail.ru</p>
+            {contactsInfo !== null && 
+              <>
+                <h3 className={styles.heading}>Контакты</h3>
+                <nav className={styles.sociallinks}>
+                  <a href={contactsInfo[0].telegram} className={styles.sociallink} target="_blank">
+                  <Image src={telegram} alt="Телеграм" className={styles.socialicon}/>
+                  </a>
+                  <a href={contactsInfo[0].vk_url} className={styles.link} target="_blank">
+                  <Image src={vk} alt="ВК" className={styles.socialicon} />
+                  </a>
+                  <a href={contactsInfo[0].ok_url} className={styles.link} target="_blank">
+                  <Image src={ok} alt="Одноклассники" className={styles.socialicon}/>
+                  </a>
+                </nav>
+                <p className={styles.info}>{contactsInfo[0].phone}</p>
+                <p className={styles.info}>{contactsInfo[0].mail}</p>
+              </>
+            }
             </div>
           </div>
         </div>
