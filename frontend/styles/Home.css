@@ -8,6 +8,163 @@ body {
   font-family: Inter;
 }
 
+.modal-window {
+  position: fixed;
+  z-index: 40;
+  top: 50%;
+  left: 50%;
+  max-width: 1000px;
+  width: 65%;
+  max-height: calc(100vh - 210px);
+  background: white;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  overflow-y: auto;
+}
+
+.closeIcon {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  border-radius: 100%;
+  background-image: url("../images/close-icon-2.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: opacity .1s linear;
+  cursor: pointer;
+}
+
+.closeIcon:hover {
+  opacity: .6;
+}
+
+.card-holder img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: scale-down;
+  object-position: center center;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 40px;
+}
+
+@media (max-width: 1100px) {
+  .modal-window {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-window {
+    width: 90%;
+  }
+
+  .modal-title {
+    font-size: 36px !important;
+  }
+  .modalDate {
+    font-size: 20px !important;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.card-holder img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.modal-title {
+  font-family: "Sreda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  /* identical to box height, or 48px */
+
+  text-align: center;
+  color: var(--Cyan-300);
+  margin: 2% 0 2% 0;
+}
+
+.modal-body {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+
+  letter-spacing: -0.03em;
+  color: var(--Cyan-300);
+  width: 90%;
+  margin-inline: auto;
+  text-align: start;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-inline: 5%;
+}
+.back-btn {
+  border-radius: 100%;
+  border: none;
+  width: 40px;
+  background-image: url("../images/arrow-left.svg");
+  height: 40px;
+  transition: 0.2s;
+}
+
+.btn-revers {
+  transform: rotate(-180deg);
+}
+
+.back-btn:hover {
+  cursor: pointer;
+  background: #eb855a;
+  background-image: url("../images/arrow-left-hover.svg");
+}
+
+.modalDate {
+  font-family: "Sreda";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  /* identical to box height, or 24px */
+
+  text-align: center;
+
+  color: #164f64;
+}
+
+.modal {
+  display: block; /* Note */
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 ::-webkit-scrollbar-track {
   background-color: var(--Gradation-200);
 }

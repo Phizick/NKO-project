@@ -13,8 +13,6 @@ function Partners() {
     .catch(err => console.log(err))
   }, [])
 
-  console.log(partners);
-
     return (
         <>
           <div className={ styles.partners }>

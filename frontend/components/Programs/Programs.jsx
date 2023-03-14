@@ -6,15 +6,16 @@ import Image from "next/image";
 import api from "../../src/utils/Api";
 import Project from '../Project/Project'
 
-function Programs() {
+function Programs({setModal}) {
   const [isScreenBig, setIsScreenBig] = useState(true);
   const [activityTypes, setActivityTypes] = useState([]);
   const [activities, setActivities] = useState([]);
+  const [counter, setCounter] = useState(3)
 
   useEffect(() => {
     Promise.all([
       api.getInfo('projects'),
-      api.getInfo('projecttype')
+      api.getInfo('project-types')
     ])
     .then(([activitiesInfo, activityTypesInfo]) => {
       setActivities(activitiesInfo.results);
@@ -25,16 +26,17 @@ function Programs() {
 
   const events = []
 
-
   activities.map(project => {
     activityTypes.map(type => {
 
-      if(project.activity_type === type.id) {
+      if(project.project_type === type.id) {
         events.push({
           name: project.name,
           description: project.description,
+          short_description: project.short_description,
           type: type.name,
-          id: project.id
+          id: project.id,
+          src: project.photo
         })
       }
     })
@@ -66,6 +68,11 @@ function Programs() {
       setIsScreenBig(false);
     }
   }
+
+  function handlePrograms () {
+    setCounter(counter + 3)
+  }
+
   return (
     <>
       <section className={style.programs}>
@@ -73,11 +80,14 @@ function Programs() {
         {isScreenBig ? (
           <>
             <h1 className={style.title}>Наши программы</h1>
-            {(events !== undefined && events.slice(-3).map(data => {
+            {(events !== undefined && events.slice(0, counter).map(data => {
               return(
                 <Project 
-                  data={data} 
-                  key={data.id}/>
+                  {...data} 
+                  key={data.id}
+                  projectInfo={data}
+                  setModal={setModal}
+                />
               )
             }))}
             <div className={style.square}>
@@ -91,15 +101,24 @@ function Programs() {
         ) : (
           <>
             <h1 className={style.title}>Наши программы</h1>
-            {(events !== undefined && events.slice(-3).map(data => {
+            {(events !== undefined && events.slice(0, counter).map(data => {
               return(
                 <Project 
-                  data={data} 
-                  key={data.id}/>
+                  {...data} 
+                  key={data.id}
+                  projectInfo={data}
+                  setModal={setModal}
+                />
               )
             }))}
           </>
         )}
+        <button 
+          type="button" 
+          className={style.button} 
+          onClick={handlePrograms}
+          disabled={events !== undefined && counter >= events.length}
+        >Показать еще</button>
       </section>
     </>
   );

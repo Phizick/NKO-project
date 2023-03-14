@@ -40,17 +40,28 @@
   color: var(--Gradation-600);
   margin: 0;
   padding-top: 12px;
-  z-index: 100;
+  z-index: 5;
 }
 
-.program__link {
+.program__button {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
   color: var(--Orange-300);
-  padding-top: 16px;
+  text-align: start;
+  padding: 16px 0 0;
+  border: none;
+  background: inherit;
+  width: 160px;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.program__button:hover {
+  opacity: .6;
 }
 
 @media(max-width: 1439px) {
@@ -107,7 +118,7 @@
     width: 100%;
   }
 
-  .program__link {
+  .program__button {
     margin-top: 12px;
     padding: 0;
   }

@@ -6,11 +6,13 @@ import Footer from "../../components/Footer/Footer";
 import Gallery from "../../components/Gallery/Gallery";
 import Header from "../../components/Header/Header";
 import Programs from "../../components/Programs/Programs";
+import ProgramsModal from "../../components/ProgramsModal/ProgramsModal.jsx";
 import api from "../../src/utils/Api.js";
 import style from './about-us.module.css';
 
 export default function AboutUs() {
   const [about, setAbout] = useState([]);
+  const [modal, setModal] = useState("");
 
   useEffect(() => {
     api.getInfo('about')
@@ -21,6 +23,7 @@ export default function AboutUs() {
   return (
     <>
       <Header />
+      {modal && <ProgramsModal modal={modal} setModal={setModal} />}
       <section className={style.wrapper}>
         <h1 className={style.title}>{about !== undefined &&
           about.map(el => el.title)
@@ -31,7 +34,7 @@ export default function AboutUs() {
         </p>
         <Link className={style.link} href="/donation">Сделать пожертвование</Link>
       </section>
-      <Programs />
+      <Programs setModal={setModal} />
       <Gallery />
       <section className={style.document}>
         <h1 className={style.title_document}>Учредительные документы</h1>
