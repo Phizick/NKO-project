@@ -11,26 +11,37 @@ import api from "../../src/utils/Api.js";
 import style from './about-us.module.css';
 
 export default function AboutUs() {
-  const [about, setAbout] = useState([]);
+  const classNames = require("classnames");
+  const [about, setAbout] = useState(null);
   const [modal, setModal] = useState("");
 
   useEffect(() => {
-    api.getInfo('about')
+    api.getInfo('contacts')
     .then(res => setAbout(res.results))
     .catch(err => console.log(err))
   }, [])
+
+  console.log(about);
 
   return (
     <>
       <Header />
       {modal && <ProgramsModal modal={modal} setModal={setModal} />}
+      <div className={style.stepper}>
+            <Link href="/" className={style.stepper_text}>
+              Главная
+            </Link>
+            <div className={style.arrow}></div>
+            <Link
+              href="/about-us"
+              className={classNames(style.stepper_text, style.text_active)}
+            >
+              О нас
+            </Link>
+          </div>
       <section className={style.wrapper}>
-        <h1 className={style.title}>{about !== undefined &&
-          about.map(el => el.title)
-        }</h1>
-        <p className={style.description}>{about !== undefined &&
-          about.map(el => el.info)
-        }
+        <h1 className={style.title}>О нас:</h1>
+        <p className={style.description}>{about !== null && about[0].fund_info}
         </p>
         <Link className={style.link} href="/donation">Сделать пожертвование</Link>
       </section>
