@@ -21,8 +21,6 @@ export default function AboutUs() {
     .catch(err => console.log(err))
   }, [])
 
-  console.log(about);
-
   return (
     <>
       <Header />
@@ -50,11 +48,6 @@ export default function AboutUs() {
       <section className={style.document}>
         <h1 className={style.title_document}>Учредительные документы</h1>
         <div className={style.shell}>
-          <Document />
-          <Document />
-          <Document />
-          <Document />
-          <Document />
           <Document />
         </div>
       </section>

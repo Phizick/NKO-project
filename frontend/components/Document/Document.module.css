@@ -1,11 +1,11 @@
 .wrapper {
   max-width: 357px;
-  height: 397px;
+  height: 320px;
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 47px;
   background: #FFFFFF;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
   border-radius: 24px;
@@ -14,11 +14,11 @@
 .img {
   height: 88px;
   width: 88px;
-  padding-top: 32px;
 }
 
 .title {
-  width: 248px;
+  max-width: 248px;
+  width: 100%;
   margin: 0;
   font-family: 'Sreda';
   font-style: normal;
@@ -37,11 +37,11 @@
   color: rgba(0, 0, 0, 0.38);
 }
 
-.button {
+.img_link {
   width: 145px;
   height: 54px;
   padding: 0;
-  margin-bottom: 32px;
+  text-decoration: none;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -50,13 +50,14 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 125%;
+  color: #000000;
   border: 1px solid #000000;
   background: transparent;
   cursor: pointer;
   transition: .2s;
 }
 
-.button:hover {
+.img_link:hover {
   box-shadow: 0 0 10px #000;
 }
 
@@ -69,7 +70,6 @@
   .wrapper {
     max-width: 300px;
     height: 357px;
-    gap: 37px;
   }
 }
 
@@ -77,13 +77,11 @@
   .wrapper {
     max-width: 250px;
     height: 280px;
-    gap: 20px;
   }
 
   .img {
     height: 60px;
     width: 60px;
-    padding-top: 32px;
   }
 
   .title {
@@ -96,7 +94,7 @@
     line-height: 120%;
   }
 
-  .button {
+  .img_link {
     width: 125px;
     height: 40px;
   }
@@ -106,13 +104,11 @@
     .wrapper {
     max-width: 200px;
     height: 230px;
-    gap: 20px;
   }
 
   .img {
     height: 50px;
     width: 50px;
-    padding-top: 28px;
   }
 
   .title {
@@ -125,7 +121,7 @@
     line-height: 110%;
   }
 
-  .button {
+  .img_link {
     width: 110px;
     height: 30px;
   }
@@ -140,13 +136,11 @@
     .wrapper {
     max-width: 150px;
     height: 170px;
-    gap: 15px;
   }
 
   .img {
     height: 30px;
     width: 30px;
-    padding-top: 28px;
   }
 
   .title {
@@ -159,7 +153,7 @@
     line-height: 110%;
   }
 
-  .button {
+  .img_link {
     width: 90px;
     height: 22px;
     margin-bottom: 22px;
@@ -175,13 +169,11 @@
   .wrapper {
   max-width: 120px;
   height: 140px;
-  gap: 15px;
 }
 
 .img {
   height: 20px;
   width: 20px;
-  padding-top: 10px;
 }
 
 .title {
@@ -194,7 +186,7 @@
   line-height: 110%;
 }
 
-.button {
+.img_link {
   width: 70px;
   height: 22px;
   margin-bottom: 15px;
@@ -212,13 +204,11 @@
   .wrapper {
     max-width: 200px;
     height: 230px;
-    gap: 20px;
   }
 
   .img {
     height: 50px;
     width: 50px;
-    padding-top: 28px;
   }
 
   .title {
@@ -231,7 +221,7 @@
     line-height: 110%;
   }
 
-  .button {
+  .img_link {
     width: 110px;
     height: 30px;
     font-size: 18px;

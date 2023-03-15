@@ -83,6 +83,8 @@
 .document {
   margin: auto;
   background: var(--Gradation-200);
+  max-width: 1440px;
+  width: 100%;
 }
 
 .title_document {
