@@ -14,15 +14,11 @@ function Document() {
     .catch(err => console.log(err))
   }, [])
 
-  console.log(foundFiles);
-
   const foundDocuments = foundFiles !== null && foundFiles.filter(doc => {
     if(doc.is_fond_doc === true) {
       return doc
     }
   })
-
-  console.log(foundDocuments);
 
   return (
     <>

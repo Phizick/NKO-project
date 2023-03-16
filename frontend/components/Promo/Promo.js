@@ -45,9 +45,9 @@ function Promo() {
           <h1 className={styles.title}>
             Мы занимаемся помощью людям с&nbsp;ментальными нарушениями. Каждый
             человек -
-            <Image src={photo1} alt="Фото 1" className={styles.image} />
-            <Image src={photo2} alt="Фото 2" className={styles.image} />
-            <Image src={photo3} alt="Фото 3" className={styles.image} />
+            <Image src={photo1} width='40' height='40' alt="Фото 1" className={styles.image} />
+            <Image src={photo2} width='40' height='40' alt="Фото 2" className={styles.image} />
+            <Image src={photo3} width='40' height='40' alt="Фото 3" className={styles.image} />
             особенный
           </h1>
           <p className={styles.subtitle}>
@@ -59,9 +59,9 @@ function Promo() {
       ) : (
         <>
           <div className={styles.images}>
-            <Image src={photo1} alt="Фото 1" className={styles.image} />
-            <Image src={photo2} alt="Фото 2" className={styles.image} />
-            <Image src={photo3} alt="Фото 3" className={styles.image} />
+            <Image src={photo1} width='40' height='40' alt="Фото 1" className={styles.image} />
+            <Image src={photo2} width='40' height='40' alt="Фото 2" className={styles.image} />
+            <Image src={photo3} width='40' height='40' alt="Фото 3" className={styles.image} />
           </div>
           <h1 className={styles.title}>
             Мы занимаемся помощью людям с&nbsp;ментальными нарушениями.
@@ -75,14 +75,14 @@ function Promo() {
           </Link>
           <Link href="/donation" className={styles.donation}>
             Сделать пожертвование
-            <Image src={heart} alt="Сердечко" className={styles.littleImg} />
+            <Image src={heart} width='14' height='14' alt="Сердечко" className={styles.littleImg} />
           </Link>
         </div>
       ) : (
         <div className={styles.links}>
           <Link href="/donation" className={styles.donation}>
             Сделать пожертвование
-            <Image src={heart} alt="Сердечко" className={styles.littleImg} />
+            <Image src={heart} width='14' height='14' alt="Сердечко" className={styles.littleImg} />
           </Link>
           <Link href="/about-us" className={styles.aboutUs}>
             О нашем проекте

@@ -146,9 +146,8 @@
 }
 .donate__formImage {
 	margin: 40px 0 40px 24px;
-	width: 368px;
-	height: 420px;
 	object-fit: cover;
+	display: block;
 	object-position: 34% 50%;
 	border-radius: 5px;
 	grid-area: img;

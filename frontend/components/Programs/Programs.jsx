@@ -95,6 +95,9 @@ function Programs({setModal}) {
                 src={picture}
                 alt="Рисунок детей"
                 className={style.img}
+                width='320'
+                height='320'
+                priority
               />
             </div>
           </>

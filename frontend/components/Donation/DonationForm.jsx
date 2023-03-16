@@ -42,7 +42,7 @@ const DonationForm = ({ root }) => {
 							Разовая поддержка
 					</button>
 				</div>
-				<Image src={donateFormImg} className={styles.donate__formImage} alt="счастливые молодой парень и мужчина смотрят друг другу в глаза" />
+				<Image src={donateFormImg} className={styles.donate__formImage} width='368' height='420' alt="счастливые молодой парень и мужчина смотрят друг другу в глаза" />
 				<span className={styles.donate__formTitle}>Выберите сумму пожертвования:</span>
 				<div className={styles.donate__donationContainer}>
 					<DonationRadioButton value={50} onChange={donateHandler} donateAmount={donateAmount} />

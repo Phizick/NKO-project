@@ -34,7 +34,6 @@
 }
 
 .card-holder img {
-  width: 100%;
   border-radius: 20px;
   object-fit: scale-down;
   object-position: center center;
@@ -46,7 +45,6 @@
 }
 
 .card-holder img {
-  width: 100%;
   border-radius: 20px;
 }
 

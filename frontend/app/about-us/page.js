@@ -2,9 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Document from "../../components/Document/Document.jsx";
-import Footer from "../../components/Footer/Footer";
 import Gallery from "../../components/Gallery/Gallery";
-import Header from "../../components/Header/Header";
 import Programs from "../../components/Programs/Programs";
 import ProgramsModal from "../../components/ProgramsModal/ProgramsModal.jsx";
 import api from "../../src/utils/Api.js";
@@ -23,7 +21,6 @@ export default function AboutUs() {
 
   return (
     <>
-      <Header />
       {modal && <ProgramsModal modal={modal} setModal={setModal} />}
       <div className={style.stepper}>
             <Link href="/" className={style.stepper_text}>
@@ -51,7 +48,6 @@ export default function AboutUs() {
           <Document />
         </div>
       </section>
-      <Footer />
     </>
   )
 }

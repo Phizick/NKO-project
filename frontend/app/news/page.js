@@ -81,7 +81,6 @@ export default function News() {
 
   return (
     <div className="App">
-      <Header />
       {filtered !== null && 
         <div className="container">
           {modal && <NewsModal modal={modal} setModal={setModal} />}
@@ -174,7 +173,6 @@ export default function News() {
           </div>
         </div>
       }
-      <Footer />
     </div>
   );
 }

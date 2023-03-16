@@ -4,8 +4,6 @@ import "../../styles/Home.css";
 import "../../styles/design_tokens.css";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import heartImg from "../../images/heart.png";
 import EventCard from "../../components/EventCard/EventCard";
 import { useEffect, useState } from "react";
@@ -45,7 +43,6 @@ export default function Events() {
     <div className="App">
       <div className="container">
         {modal && <EventsModal modal={modal} setModal={setModal} />}
-        <Header />
         <div className={styles.stepper}>
           <Link href="/" className={styles.stepper_text}>
             Главная
@@ -108,7 +105,6 @@ export default function Events() {
               ) : null;
             })}
         </div>
-        <Footer />
       </div>
     </div>
   );

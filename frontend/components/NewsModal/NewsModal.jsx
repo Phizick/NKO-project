@@ -13,7 +13,7 @@ const NewsModal = ({ modal, setModal }) => {
       <div className="modal-window">
         <button className="closeIcon" type="button" aria-label="Закрыть окно" onClick={() => setModal("")}></button>
         <div className="card-holder">
-          <Image src={modal.picture} width = '400' height='350' alt="Image" priority />
+          <Image src={modal.picture} width = '600' height='420' alt="Image" priority />
         </div>
         <h3 className="modal-title">{modal.title}</h3>
         <p className="modal-body">{modal.description}</p>

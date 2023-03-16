@@ -34,6 +34,7 @@
   width: 320px;
   height: 320px;
   border-radius: 5px;
+  display: block;
   transform: rotate(5deg);
   border: 1px solid var(--Cyan-300);
   z-index: 1;
