@@ -1,32 +1,3 @@
-.stepper {
-  margin: 35px auto 0;
-  padding-left: 30px;
-  display: flex;
-  max-width: 1440px;
-  width: 100%;
-}
-
-.arrow {
-  background-image: url("../../images/stepper_arrow_right.svg");
-  width: 24px;
-  height: 24px;
-  margin: 0 23px 0 8px;
-}
-
-.stepper_text {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-  color: var(--Cyan-300);
-  text-decoration: none;
-}
-
-.text_active {
-  border-bottom: 1px solid black;
-}
-
 .page_title {
   display: flex;
   justify-content: center;

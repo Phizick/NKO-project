@@ -3,12 +3,12 @@ import styles from "./events.module.css";
 import "../../styles/Home.css";
 import "../../styles/design_tokens.css";
 import Image from "next/image";
-import Link from "next/link";
 import heartImg from "../../images/heart.png";
 import EventCard from "../../components/EventCard/EventCard";
 import { useEffect, useState } from "react";
 import EventsModal from "../../components/EventsModal/EventsModal";
 import api from "../../src/utils/Api";
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 
 export default function Events() {
   const classNames = require("classnames");
@@ -43,18 +43,7 @@ export default function Events() {
     <div className="App">
       <div className="container">
         {modal && <EventsModal modal={modal} setModal={setModal} />}
-        <div className={styles.stepper}>
-          <Link href="/" className={styles.stepper_text}>
-            Главная
-          </Link>
-          <div className={styles.arrow}></div>
-          <Link
-            href="/events"
-            className={classNames(styles.stepper_text, styles.text_active)}
-          >
-            Мероприятия
-          </Link>
-        </div>
+        <BreadCrumbs pageHref={'/events'} pageTitle={'Мероприятия'} />
         <div className={styles.page_title}>
           <h1 className={styles.event_title}>Мероприятия</h1>
           <div className={styles.btn_holder}>

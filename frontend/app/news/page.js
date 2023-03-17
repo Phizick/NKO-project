@@ -5,8 +5,6 @@ import "../../styles/Home.css";
 import "../../styles/design_tokens.css";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import arrowDown from "../../images/arrow-down.svg";
 import { useEffect, useState } from "react";
 import NewsCard from "../../components/NewsCard/NewsCard";
@@ -14,6 +12,7 @@ import Dropdown from "../../components/Sort/Dropdown";
 import { monthsToFilter } from "./monthsList";
 import NewsModal from "../../components/NewsModal/NewsModal";
 import api from "../../src/utils/Api";
+import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
 
 export default function News() {
   const classNames = require("classnames");
@@ -84,18 +83,7 @@ export default function News() {
       {filtered !== null && 
         <div className="container">
           {modal && <NewsModal modal={modal} setModal={setModal} />}
-          <div className={styles.stepper}>
-            <Link href="/" className={styles.stepper_text}>
-              Главная
-            </Link>
-            <div className={styles.arrow}></div>
-            <Link
-              href="/news"
-              className={classNames(styles.stepper_text, styles.text_active)}
-            >
-              Новости
-            </Link>
-          </div>
+          <BreadCrumbs pageHref={'/news'} pageTitle={'Новости'} />
           <div className={styles.page_title}>
             <div>
               <h1 className={styles.event_title}>Новости</h1>
