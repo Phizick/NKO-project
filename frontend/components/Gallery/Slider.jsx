@@ -48,7 +48,7 @@ function Slider() {
             className={stylesSlider.slide}
             src={filteredImages.picture}
             width='1280'
-            height='960'
+            height='680'
             alt='Галерея'
             priority
           />

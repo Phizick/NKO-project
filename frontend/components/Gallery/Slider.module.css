@@ -13,8 +13,6 @@
 .slide {
   border-radius: 20px;
   position: relative;
-  height: 100%;
-  width: 1280px;
   object-fit: cover;
 }
 
