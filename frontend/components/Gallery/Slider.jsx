@@ -34,7 +34,7 @@ function Slider() {
 
   return (
     <section className={stylesSlider.slider}>
-      <div className={stylesSlider.div}>
+      <div className={stylesSlider.wrapper}>
         <button
           className={classNames(stylesSlider.btn, stylesSlider.btn_left)}
           onClick={leftBtnClick}
@@ -53,7 +53,6 @@ function Slider() {
             priority
           />
         )}
-
       </div>
     </section>
   );

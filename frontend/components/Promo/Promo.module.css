@@ -226,6 +226,13 @@
     }
 }
 
+@media (max-width: 904px) {
+  .promo {
+    margin: 56px 70px 0;
+  }
+}
+
+
 @media (max-width: 751px) {
     .promo {
         background-image: url(../../images/groupMobile.png);

@@ -5,7 +5,7 @@ import BurgerMenuSVG from "./burgerMenuSVG";
 
 function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.header_container}>
         <div className={styles.logo_container}>
           <BurgerMenuSVG />
@@ -66,7 +66,6 @@ function Header() {
               </clipPath>
             </defs>
           </svg>
-
           <div className={styles.logo}>
             <svg
               className={styles.logo_xl}
@@ -174,7 +173,6 @@ function Header() {
           </div>
         </div>
       </div>
-      <div></div>
       <BurgerMenu />
     </header>
   );

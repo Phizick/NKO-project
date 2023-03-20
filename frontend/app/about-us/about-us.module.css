@@ -1,3 +1,5 @@
+@import url(../../vendor/fonts/fonts.css);
+
 .wrapper {
   margin: 26px auto 0;
   background: var(--Gradation-200);
@@ -51,6 +53,12 @@
   color: var(--Gradation-100);
 }
 
+.link:hover {
+  cursor: pointer;
+  background-color: var(--Orange-200);
+	border-color: var(--Highlight-Light);
+}
+
 .document {
   margin: auto;
   background: var(--Gradation-200);
@@ -79,7 +87,6 @@
   gap: 60px 79px;
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(3,1fr);
-  grid-template-rows: repeat(2,1fr);
   padding-bottom: 106px;
 }
 .modal-window {
@@ -285,7 +292,6 @@
 
   .shell {
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
     margin: 0 100px;
   }
 }
